@@ -11,14 +11,19 @@
             padding: 0;
             background-color: #FDF6EC;
             color: #333;
+            display: flex;
+            justify-content: center;
         }
         .container {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            width: 100%;
+            max-width: 1400px;
             height: 100vh;
         }
         .sidebar {
             width: 25%;
+            min-width: 250px;
             background-color: #800000;
             color: white;
             padding: 20px;
@@ -34,8 +39,12 @@
             margin-bottom: 15px;
         }
         .main {
-            width: 75%;
+            flex-grow: 1;
             padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 75%;
         }
         nav {
             display: flex;
@@ -43,6 +52,7 @@
             gap: 20px;
             background-color: #A6192E;
             padding: 10px;
+            width: 100%;
         }
         nav a {
             color: white;
@@ -56,6 +66,9 @@
         }
         .content {
             display: none;
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
         }
         .content.active {
             display: block;
@@ -63,12 +76,17 @@
         @media (max-width: 800px) {
             .container {
                 flex-direction: column;
+                height: auto;
             }
             .sidebar {
                 width: 100%;
             }
             .main {
                 width: 100%;
+            }
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
             }
         }
     </style>
@@ -115,3 +133,4 @@
     </script>
 </body>
 </html>
+
