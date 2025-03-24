@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Academic Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { display: flex; font-family: Arial, sans-serif; margin: 0; }
+        .sidebar { width: 25%; background: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .sidebar img { width: 80%; border-radius: 50%; }
+        .sidebar h2, .sidebar p { margin: 10px 0; }
+        .main { width: 75%; padding: 20px; }
+        .nav { display: flex; gap: 15px; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        .nav button { background: none; border: none; cursor: pointer; font-size: 18px; }
+        .content { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="profile.jpg" alt="Profile Picture">
+        <h2>Your Name</h2>
+        <p>Affiliation | Researcher | Scholar</p>
+        <p>Email: your.email@domain.com</p>
+        <p><a href="https://github.com/yourgithub" style="color: white;"><i class="fab fa-github"></i> GitHub</a></p>
+    </div>
+    <div class="main">
+        <div class="nav">
+            <button onclick="showSection('about')">About Me</button>
+            <button onclick="showSection('cv')">CV</button>
+            <button onclick="showSection('publications')">Publications</button>
+            <button onclick="showSection('research')">Research</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
+        <div class="content" id="about"><h3>About Me</h3><p>Brief introduction about yourself.</p></div>
+        <div class="content" id="cv" style="display: none;"><h3>CV</h3><p>Download CV here.</p></div>
+        <div class="content" id="publications" style="display: none;"><h3>Publications</h3><p>List of research papers.</p></div>
+        <div class="content" id="research" style="display: none;"><h3>Research</h3><p>Current projects and interests.</p></div>
+        <div class="content" id="contact" style="display: none;"><h3>Contact</h3><p>Email and social links.</p></div>
+    </div>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
