@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is a personal academic page for WangXiRui, a researcher in AI and Robotics at HUST. Find CV, publications, projects, and contact information here.">
     <title>Personal Academic Page Of WangXiRui</title>
-    <link rel="icon" href="images/Designer.ico" type="image/x-icon"><!-- 确保图标路径和文件类型正确 -->
+    <link rel="icon" href="images/Designer.ico" type="image/x-icon">
     
-    <!-- 引入Google Fonts字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
         body {
-            font-family: 'Poppins', sans-serif; /* 使用Poppins字体 */
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #FDF6EC;
@@ -42,8 +41,7 @@
         .main {
             flex-grow: 1;
             padding: 40px;
-            overflow: hidden;
-            min-width: 0; /* 确保右侧空间正确填充 */
+            min-width: 300px;
         }
         nav {
             display: flex;
@@ -57,8 +55,9 @@
             text-decoration: none;
             font-weight: bold;
             padding: 8px 12px;
+            transition: background 0.3s;
         }
-        nav a:hover {
+        nav a:hover, nav a.active {
             background-color: #800000;
             border-radius: 5px;
         }
@@ -67,9 +66,6 @@
         }
         .content.active {
             display: block;
-        }
-        .content h2 {
-            margin-top: 0;
         }
         @media (max-width: 800px) {
             .container {
@@ -80,6 +76,7 @@
             }
             .main {
                 width: 100%;
+                padding: 20px;
             }
         }
     </style>
@@ -88,15 +85,15 @@
     <div class="container">
         <div class="sidebar">
             <img src="images/Profile.jpg" alt="Profile Picture">
-            <h2>WangXiRui(Wangfans)</h2>
+            <h2>WangXiRui (Wangfans)</h2>
             <p>🔬 Researcher | 🎓 AI & Robotics | 📍 Huazhong University of Science and Technology</p>
         </div>
         <div class="main">
             <nav>
-                <a href="#" onclick="showContent('cv')">📄 CV</a>
-                <a href="#" onclick="showContent('publications')">📚 Publications</a>
-                <a href="#" onclick="showContent('projects')">💡 Projects</a>
-                <a href="#" onclick="showContent('contact')">📬 Contact</a>
+                <a href="#" onclick="showContent(event, 'cv')">📄 CV</a>
+                <a href="#" onclick="showContent(event, 'publications')">📚 Publications</a>
+                <a href="#" onclick="showContent(event, 'projects')">💡 Projects</a>
+                <a href="#" onclick="showContent(event, 'contact')">📬 Contact</a>
             </nav>
             <div id="cv" class="content active">
                 <h2>Curriculum Vitae</h2>
@@ -110,7 +107,7 @@
             <div id="projects" class="content">
                 <h2>Projects</h2>
                 <ul>
-                    <li>🐾 <strong>Virtual Pet Project</strong> - A reinforcement learning driven virtual pet project integrated with dynamic NFTs. You can find the GitHub repository <a href="https://github.com/wangfans248/VirtualPet" target="_blank">here</a>.</li>
+                    <li>🐾 <strong>Virtual Pet Project</strong> - A reinforcement learning-driven virtual pet project integrated with dynamic NFTs. Find the GitHub repository <a href="https://github.com/wangfans248/VirtualPet" target="_blank">here</a>.</li>
                 </ul>
             </div>
             <div id="contact" class="content">
@@ -122,10 +119,13 @@
     </div>
 
     <script>
-        function showContent(section) {
+        function showContent(event, section) {
             document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
             document.getElementById(section).classList.add('active');
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>
 </html>
+
