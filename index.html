@@ -17,43 +17,34 @@
             background-color: #FDF6EC;
             color: #333;
         }
+
+        /* 主容器，确保内容横向排列 */
         .container {
-    display: flex;
-    flex-wrap: nowrap; /* 确保主内容不换行 */
-    min-height: 100vh;
-}
+            display: flex;
+            flex-wrap: nowrap; /* 保持不换行 */
+            min-height: 100vh;
+        }
 
+        /* 侧边栏样式 */
         .sidebar {
-    width: 25%;
-    background-color: #800000;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+            width: 25%;
+            background-color: #800000;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
+        /* 主要内容区 */
         .main {
-    flex: 1; /* 自动填充剩余空间 */
-    min-width: 0; /* 避免 min-width 影响布局 */
-    padding: 40px;
-}
+            flex: 1; /* 填充剩余空间 */
+            min-width: 300px; /* 确保不会被挤压得太小 */
+            padding: 40px;
+        }
 
-    @media (max-width: 800px) {
-        .container {
-        flex-direction: column;
-        }
-        .sidebar {
-        width: 100%;
-        }
-        .main {
-        width: 100%;
-        padding: 20px;
-        }
-    }
-
-        }
+        /* 导航栏样式 */
         nav {
             display: flex;
             justify-content: center;
@@ -61,6 +52,7 @@
             background-color: #A6192E;
             padding: 10px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
@@ -68,16 +60,22 @@
             padding: 8px 12px;
             transition: background 0.3s;
         }
+
         nav a:hover, nav a.active {
             background-color: #800000;
             border-radius: 5px;
         }
+
+        /* 内容区域默认隐藏 */
         .content {
             display: none;
         }
+
         .content.active {
             display: block;
         }
+
+        /* 响应式布局：小屏幕时侧边栏变成上方导航 */
         @media (max-width: 800px) {
             .container {
                 flex-direction: column;
@@ -94,11 +92,14 @@
 </head>
 <body>
     <div class="container">
+        <!-- 侧边栏 -->
         <div class="sidebar">
             <img src="images/Profile.jpg" alt="Profile Picture">
             <h2>WangXiRui (Wangfans)</h2>
             <p>🔬 Researcher | 🎓 AI & Robotics | 📍 Huazhong University of Science and Technology</p>
         </div>
+
+        <!-- 主要内容区 -->
         <div class="main">
             <nav>
                 <a href="#" onclick="showContent(event, 'cv')">📄 CV</a>
@@ -106,21 +107,25 @@
                 <a href="#" onclick="showContent(event, 'projects')">💡 Projects</a>
                 <a href="#" onclick="showContent(event, 'contact')">📬 Contact</a>
             </nav>
+
             <div id="cv" class="content active">
                 <h2>Curriculum Vitae</h2>
                 <p><strong>Education</strong></p>
                 <p><strong>2024.09 – Present:</strong> Currently studying in the Innovation Class (Robotics) at Huazhong University of Science and Technology, School of Mechanical Science and Engineering.</p>
             </div>
+
             <div id="publications" class="content">
                 <h2>Publications</h2>
                 <p>Coming soon...</p>
             </div>
+
             <div id="projects" class="content">
                 <h2>Projects</h2>
                 <ul>
                     <li>🐾 <strong>Virtual Pet Project</strong> - A reinforcement learning-driven virtual pet project integrated with dynamic NFTs. Find the GitHub repository <a href="https://github.com/wangfans248/VirtualPet" target="_blank">here</a>.</li>
                 </ul>
             </div>
+
             <div id="contact" class="content">
                 <h2>Contact</h2>
                 <p>Email: wangfansheng1122@outlook.com</p>
@@ -133,10 +138,10 @@
         function showContent(event, section) {
             document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
             document.getElementById(section).classList.add('active');
+
             document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
             event.currentTarget.classList.add('active');
         }
     </script>
 </body>
 </html>
-
