@@ -6,9 +6,13 @@
     <meta name="description" content="This is a personal academic page for WangXiRui, a researcher in AI and Robotics at HUST. Find CV, publications, projects, and contact information here.">
     <title>Personal Academic Page</title>
     <link rel="icon" href="images/Designer.png" type="image/png">
+    
+    <!-- 引入Google Fonts字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif; /* 使用Poppins字体 */
             margin: 0;
             padding: 0;
             background-color: #FDF6EC;
@@ -39,6 +43,7 @@
             flex-grow: 1;
             padding: 40px;
             overflow: hidden;
+            min-width: 0; /* 确保右侧空间正确填充 */
         }
         nav {
             display: flex;
@@ -80,7 +85,7 @@
     <div class="container">
         <div class="sidebar">
             <img src="images/Profile.jpg" alt="Profile Picture">
-            <h2>Your Name</h2>
+            <h2>WangXiRui(Wangfans)</h2>
             <p>🔬 Researcher | 🎓 AI & Robotics | 📍 Huazhong University of Science and Technology</p>
         </div>
         <div class="main">
@@ -121,4 +126,3 @@
     </script>
 </body>
 </html>
-
