@@ -131,6 +131,15 @@
             </p>
 
             <p class="quote">My value lies not in perfection, but in potential and the ability to act.</p>
+            
+            <!-- AI对话邀请 -->
+            <div style="margin-top: 30px; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; cursor: pointer; transition: all 0.3s ease;" onclick="openFansbotChat()" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
+                <p style="margin: 0; font-size: 14px; color: white; text-align: center;">
+                    <span style="display: block; margin-bottom: 5px;">Wanna talk? → 🤖</span>
+                    <span style="font-size: 12px; opacity: 0.8;">想要聊天吗？→ 点击🤖</span>
+                </p>
+            </div>
+            
             <img src="images/Designer.png" alt="Designer Logo" class="designer-logo">
         </div>
 
@@ -169,7 +178,13 @@
         </div>
     </div>
 
+    <!-- Fansbot AI聊天组件 -->
+    <script src="fansbot-chat.js"></script>
+
     <script>
+        // 全局变量存储Fansbot实例
+        let fansbotInstance = null;
+        
         function showContent(event, section) {
             document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
             document.getElementById(section).classList.add('active');
@@ -177,6 +192,29 @@
             document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
             event.currentTarget.classList.add('active');
         }
+        
+        function openFansbotChat() {
+            if (fansbotInstance) {
+                fansbotInstance.openChat();
+            }
+        }
+        
+        // 页面加载完成后初始化Fansbot
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                fansbotInstance = new FansBot({
+                    // 优先使用在线API，失败时降级到演示模式
+                    apiUrl: 'https://your-api-endpoint.com', // 后续替换为实际API地址
+                    fallbackApiUrl: 'http://localhost:8000', // 本地测试
+                    theme: 'academic',
+                    position: 'bottom-right',
+                    demoMode: true // 启用演示模式
+                });
+                console.log('🤖 Fansbot initialized successfully!');
+            } catch (error) {
+                console.error('Failed to initialize Fansbot:', error);
+            }
+        });
     </script>
 </body>
 </html>
