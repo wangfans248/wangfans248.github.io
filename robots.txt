@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# 网站地图位置
+Sitemap: https://wangfans248.github.io/sitemap.xml
+
+# 禁止访问的目录（如果有的话）
+# Disallow: /private/
+
+# 爬取延迟（可选，单位：秒）
+Crawl-delay: 1 
