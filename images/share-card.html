@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WangXiRui 分享卡片生成器</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+        }
+        
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .share-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #8B0000 0%, #A52A2A 25%, #DC143C 75%, #B22222 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* 装饰性元素 */
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+        }
+        
+        .decoration-1 {
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+        
+        .decoration-2 {
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+        
+        .decoration-3 {
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+            width: 100px;
+            height: 100px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        
+        .avatar-section {
+            flex-shrink: 0;
+            margin-right: 60px;
+            text-align: center;
+        }
+        
+                 .avatar {
+             width: 200px;
+             height: 200px;
+             border-radius: 50%;
+             border: 6px solid white;
+             background: url('./Profile.jpg') center/cover;
+             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+             margin-bottom: 20px;
+             position: relative;
+             animation: scaleIn 1s ease-out forwards;
+             transform: scale(0);
+         }
+        
+        .avatar::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        
+        .university-badge {
+            background: rgba(255, 255, 255, 0.95);
+            color: #8B0000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .content-section {
+            flex: 1;
+            color: white;
+        }
+        
+                 .main-title {
+             font-size: 56px;
+             font-weight: 700;
+             margin-bottom: 15px;
+             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+             line-height: 1.1;
+             animation: fadeInUp 0.8s ease-out forwards;
+             transform: translateY(30px);
+             opacity: 0;
+         }
+         
+         .subtitle {
+             font-size: 28px;
+             font-weight: 500;
+             margin-bottom: 25px;
+             opacity: 0.95;
+             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+             animation: fadeInUp 0.8s ease-out forwards;
+             animation-delay: 0.1s;
+             transform: translateY(30px);
+             opacity: 0;
+         }
+        
+                 .description {
+             margin-bottom: 30px;
+             max-width: 520px;
+         }
+         
+         .desc-line {
+             font-size: 19px;
+             line-height: 1.6;
+             margin-bottom: 8px;
+             opacity: 0.95;
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             animation: fadeInUp 0.6s ease-out forwards;
+             transform: translateY(20px);
+             opacity: 0;
+         }
+         
+         .desc-line:nth-child(1) {
+             animation-delay: 0.2s;
+         }
+         
+         .desc-line:nth-child(2) {
+             animation-delay: 0.4s;
+         }
+         
+         .desc-line:nth-child(3) {
+             animation-delay: 0.6s;
+         }
+         
+         @keyframes fadeInUp {
+             to {
+                 opacity: 0.95;
+                 transform: translateY(0);
+             }
+         }
+         
+         @keyframes scaleIn {
+             0% {
+                 transform: scale(0);
+                 opacity: 0;
+             }
+             50% {
+                 transform: scale(1.1);
+             }
+             100% {
+                 transform: scale(1);
+                 opacity: 1;
+             }
+         }
+        
+        .tags {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .website-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .website-icon {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #8B0000;
+        }
+        
+        .instructions {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .instructions p {
+            margin: 10px 0;
+        }
+        
+        .save-button {
+            background: #8B0000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .save-button:hover {
+            background: #A52A2A;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="share-card" id="shareCard">
+            <!-- 装饰元素 -->
+            <div class="decoration decoration-1"></div>
+            <div class="decoration decoration-2"></div>
+            <div class="decoration decoration-3"></div>
+            
+            <!-- 头像区域 -->
+            <div class="avatar-section">
+                <div class="avatar"></div>
+                                 <div class="university-badge">🎓 HUST</div>
+            </div>
+            
+                         <!-- 内容区域 -->
+             <div class="content-section">
+                 <div class="main-title">WangXiRui</div>
+                 <div class="subtitle">AI Researcher & Tech Explorer</div>
+                 <div class="description">
+                     <div class="desc-line">🎓 Robotics Engineering Student</div>
+                     <div class="desc-line">🔬 AI Research & Development</div>
+                     <div class="desc-line">📚 Tech Tutorials & Innovation</div>
+                 </div>
+                 <div class="tags">
+                     <span class="tag">🤖 Artificial Intelligence</span>
+                     <span class="tag">🔬 Research Innovation</span>
+                     <span class="tag">💻 Open Source</span>
+                     <span class="tag">📚 Tech Sharing</span>
+                 </div>
+                 <div class="website-info">
+                     <div class="website-icon">🌐</div>
+                     <span>wangfans248.github.io</span>
+                 </div>
+             </div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <p><strong>📸 如何保存分享卡片：</strong></p>
+        <p>1. 右键点击上方卡片 → "将图像另存为"</p>
+        <p>2. 建议文件名：<code>wangxirui-share-card.png</code></p>
+        <p>3. 最佳尺寸：1200 × 630 像素</p>
+        
+        <button class="save-button" onclick="downloadCard()">📥 下载卡片</button>
+        <button class="save-button" onclick="copyToClipboard()">📋 复制图片</button>
+        <button class="save-button" onclick="showSaveInstructions()" style="background: #666;">💡 右键保存</button>
+    </div>
+    
+    <!-- html2canvas 库用于截图 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <script>
+        // 等待页面和库完全加载
+        window.addEventListener('load', function() {
+            console.log('页面加载完成，html2canvas可用:', typeof html2canvas !== 'undefined');
+        });
+        
+        // 下载功能
+        function downloadCard() {
+            console.log('开始下载卡片...');
+            
+            if (typeof html2canvas === 'undefined') {
+                alert('❌ 截图库正在加载中，请稍后再试...');
+                return;
+            }
+            
+            // 暂时移除动画，确保截图稳定
+            const card = document.getElementById('shareCard');
+            const originalStyle = card.style.cssText;
+            card.style.animation = 'none';
+            card.querySelectorAll('*').forEach(el => {
+                el.style.animation = 'none';
+                el.style.transform = 'none';
+                el.style.opacity = '1';
+            });
+            
+            setTimeout(() => {
+                html2canvas(card, {
+                    width: 1200,
+                    height: 630,
+                    scale: 1,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: null
+                }).then(canvas => {
+                    const link = document.createElement('a');
+                    link.download = 'wangxirui-share-card.png';
+                    link.href = canvas.toDataURL('image/png', 1.0);
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    
+                    // 恢复动画
+                    card.style.cssText = originalStyle;
+                    console.log('✅ 卡片下载成功！');
+                }).catch(error => {
+                    console.error('下载失败:', error);
+                    alert('❌ 下载失败，请尝试右键保存图片');
+                    
+                    // 恢复动画
+                    card.style.cssText = originalStyle;
+                });
+            }, 100);
+        }
+        
+        // 复制到剪贴板
+        function copyToClipboard() {
+            console.log('开始复制卡片...');
+            
+            if (typeof html2canvas === 'undefined') {
+                alert('❌ 截图库正在加载中，请稍后再试...');
+                return;
+            }
+            
+            const card = document.getElementById('shareCard');
+            const originalStyle = card.style.cssText;
+            card.style.animation = 'none';
+            card.querySelectorAll('*').forEach(el => {
+                el.style.animation = 'none';
+                el.style.transform = 'none';
+                el.style.opacity = '1';
+            });
+            
+            setTimeout(() => {
+                html2canvas(card, {
+                    width: 1200,
+                    height: 630,
+                    scale: 1,
+                    useCORS: true,
+                    allowTaint: true,
+                    backgroundColor: null
+                }).then(canvas => {
+                    canvas.toBlob(blob => {
+                        if (navigator.clipboard && navigator.clipboard.write) {
+                            navigator.clipboard.write([
+                                new ClipboardItem({
+                                    'image/png': blob
+                                })
+                            ]).then(() => {
+                                alert('✅ 卡片已复制到剪贴板！');
+                            }).catch(err => {
+                                console.error('复制失败:', err);
+                                fallbackCopy(canvas);
+                            });
+                        } else {
+                            fallbackCopy(canvas);
+                        }
+                        
+                        // 恢复动画
+                        card.style.cssText = originalStyle;
+                    }, 'image/png', 1.0);
+                }).catch(error => {
+                    console.error('复制失败:', error);
+                    alert('❌ 复制失败，请尝试下载功能');
+                    
+                    // 恢复动画
+                    card.style.cssText = originalStyle;
+                });
+            }, 100);
+        }
+        
+        // 备用复制方案
+        function fallbackCopy(canvas) {
+            const dataUrl = canvas.toDataURL('image/png', 1.0);
+            const img = new Image();
+            img.src = dataUrl;
+            
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                    <head><title>分享卡片 - 右键保存</title></head>
+                    <body style="margin:0; display:flex; justify-content:center; align-items:center; min-height:100vh; background:#f0f0f0;">
+                        <div style="text-align:center;">
+                            <img src="${dataUrl}" style="max-width:100%; height:auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                            <p style="margin-top:20px; color:#666;">右键点击图片选择"将图像另存为"</p>
+                        </div>
+                    </body>
+                </html>
+            `);
+        }
+        
+        // 简单的右键保存提示
+        function showSaveInstructions() {
+            alert('💡 提示：\n1. 右键点击卡片\n2. 选择"将图像另存为"\n3. 保存为 wangxirui-share-card.png');
+        }
+    </script>
+</body>
+</html> 

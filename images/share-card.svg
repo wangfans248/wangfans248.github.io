@@ -1,0 +1,79 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B0000"/>
+      <stop offset="25%" stop-color="#A52A2A"/>
+      <stop offset="75%" stop-color="#DC143C"/>
+      <stop offset="100%" stop-color="#B22222"/>
+    </linearGradient>
+    
+    <!-- 头像剪切路径 -->
+    <clipPath id="avatarClip">
+      <circle cx="150" cy="150" r="94"/>
+    </clipPath>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="630" rx="20" fill="url(#bgGradient)" filter="url(#shadow)"/>
+  
+  <!-- 装饰圆圈 -->
+  <circle cx="1050" cy="100" r="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+  <circle cx="100" cy="530" r="75" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <circle cx="950" cy="315" r="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- 头像区域 -->
+  <g transform="translate(140, 165)">
+    <!-- 头像背景圆 -->
+    <circle cx="150" cy="150" r="100" fill="white" stroke="white" stroke-width="6"/>
+    
+    <!-- 头像图片 (这里用颜色代替，实际使用时需要嵌入图片) -->
+    <circle cx="150" cy="150" r="94" fill="#DDD" clip-path="url(#avatarClip)"/>
+    <text x="150" y="160" text-anchor="middle" fill="#666" font-size="24" font-family="Arial">头像</text>
+    
+    <!-- 大学徽章 -->
+    <rect x="105" y="270" width="90" height="30" rx="15" fill="rgba(255,255,255,0.95)"/>
+    <text x="150" y="290" text-anchor="middle" fill="#8B0000" font-size="14" font-weight="600" font-family="Arial">🎓 HUST</text>
+  </g>
+  
+  <!-- 内容区域 -->
+  <g transform="translate(400, 120)">
+    <!-- 主标题 -->
+    <text x="0" y="60" fill="white" font-size="56" font-weight="700" font-family="Arial">WangXiRui</text>
+    
+    <!-- 副标题 -->
+    <text x="0" y="100" fill="rgba(255,255,255,0.95)" font-size="28" font-weight="500" font-family="Arial">AI Researcher &amp; Tech Explorer</text>
+    
+    <!-- 描述行 -->
+    <text x="0" y="140" fill="rgba(255,255,255,0.95)" font-size="19" font-family="Arial">🎓 Robotics Engineering Student</text>
+    <text x="0" y="170" fill="rgba(255,255,255,0.95)" font-size="19" font-family="Arial">🔬 AI Research &amp; Development</text>
+    <text x="0" y="200" fill="rgba(255,255,255,0.95)" font-size="19" font-family="Arial">📚 Tech Tutorials &amp; Innovation</text>
+    
+    <!-- 标签 -->
+    <g transform="translate(0, 240)">
+      <rect x="0" y="0" width="180" height="32" rx="16" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)"/>
+      <text x="90" y="22" text-anchor="middle" fill="white" font-size="14" font-weight="500" font-family="Arial">🤖 Artificial Intelligence</text>
+      
+      <rect x="190" y="0" width="150" height="32" rx="16" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)"/>
+      <text x="265" y="22" text-anchor="middle" fill="white" font-size="14" font-weight="500" font-family="Arial">🔬 Research Innovation</text>
+      
+      <rect x="0" y="40" width="120" height="32" rx="16" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)"/>
+      <text x="60" y="62" text-anchor="middle" fill="white" font-size="14" font-weight="500" font-family="Arial">💻 Open Source</text>
+      
+      <rect x="130" y="40" width="110" height="32" rx="16" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.3)"/>
+      <text x="185" y="62" text-anchor="middle" fill="white" font-size="14" font-weight="500" font-family="Arial">📚 Tech Sharing</text>
+    </g>
+    
+    <!-- 网站信息 -->
+    <g transform="translate(0, 350)">
+      <circle cx="12" cy="12" r="12" fill="white"/>
+      <text x="12" y="17" text-anchor="middle" fill="#8B0000" font-size="12" font-family="Arial">🌐</text>
+      <text x="35" y="18" fill="rgba(255,255,255,0.9)" font-size="18" font-weight="500" font-family="Arial">wangfans248.github.io</text>
+    </g>
+  </g>
+</svg> 
