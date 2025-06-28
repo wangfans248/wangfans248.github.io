@@ -278,12 +278,102 @@ class FansBot {
             
             /* 移动端适配 */
             @media (max-width: 480px) {
+                .fansbot-widget {
+                    right: 15px;
+                    bottom: 15px;
+                }
+                
                 .fansbot-chat-window {
-                    width: calc(100vw - 40px);
-                    height: calc(100vh - 100px);
-                    right: 20px !important;
-                    left: 20px !important;
-                    bottom: 80px !important;
+                    position: fixed;
+                    top: 20px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 90px;
+                    width: auto;
+                    height: auto;
+                    max-width: none;
+                    max-height: none;
+                }
+                
+                .fansbot-toggle {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 20px;
+                }
+                
+                .fansbot-header {
+                    padding: 12px 16px;
+                }
+                
+                .fansbot-header-info div:first-child {
+                    font-size: 13px;
+                }
+                
+                .fansbot-header-info div:last-child {
+                    font-size: 11px;
+                }
+                
+                .fansbot-avatar {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 16px;
+                }
+                
+                .fansbot-messages {
+                    padding: 12px;
+                }
+                
+                .fansbot-message-content {
+                    max-width: 85%;
+                    padding: 10px 14px;
+                    font-size: 13px;
+                }
+                
+                .fansbot-input-area {
+                    padding: 12px;
+                }
+                
+                .fansbot-input {
+                    padding: 8px 12px;
+                    font-size: 13px;
+                }
+                
+                .fansbot-send {
+                    width: 36px;
+                    height: 36px;
+                }
+                
+                .fansbot-welcome {
+                    padding: 15px;
+                }
+                
+                .fansbot-welcome h3 {
+                    font-size: 15px;
+                }
+                
+                .fansbot-welcome p {
+                    font-size: 13px;
+                }
+            }
+            
+            /* 超小屏幕适配 */
+            @media (max-width: 360px) {
+                .fansbot-chat-window {
+                    top: 10px;
+                    left: 10px;
+                    right: 10px;
+                    bottom: 80px;
+                }
+                
+                .fansbot-widget {
+                    right: 10px;
+                    bottom: 10px;
+                }
+                
+                .fansbot-message-content {
+                    max-width: 90%;
+                    padding: 8px 12px;
+                    font-size: 12px;
                 }
             }
         `;
