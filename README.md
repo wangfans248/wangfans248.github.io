@@ -4,7 +4,7 @@ Personal academic homepage hosted at [wangfans248.github.io](https://wangfans248
 
 ## About
 
-Undergraduate researcher at Huazhong University of Science and Technology (HUST), working on Computer Vision and Anomaly Detection.
+Undergraduate researcher at Huazhong University of Science and Technology (HUST), working on Diffusion Model, Reinforcement Learning and Anomaly Detection.
 
 ## Structure
 
