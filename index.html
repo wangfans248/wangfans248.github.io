@@ -3,2814 +3,496 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WangXiRui - AI Explorer & Tech Adventurer | Innovation Journey</title>
+    <title>Xirui Wang | HUST</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="WangXiRui - 华中科技大学机器人工程创新班学生，专注人工智能研究与开发。分享机器学习、Python、Web开发教程和创新项目。DIAN团队成员，致力于AI技术应用与教育。">
-    <meta name="keywords" content="WangXiRui, 华中科技大学, 机器人工程, 人工智能, Python教程, Web开发, 机器学习, DIAN团队, AI研究, 技术博客">
-    <meta name="author" content="WangXiRui">
+    <meta name="description" content="Xirui Wang - Undergraduate researcher at Huazhong University of Science and Technology. Research interests in Computer Vision and Anomaly Detection.">
+    <meta name="keywords" content="Xirui Wang, HUST, Computer Vision, Anomaly Detection, Robotics, Machine Learning">
+    <meta name="author" content="Xirui Wang">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="WangXiRui - AI研究者 & 技术探索者">
-    <meta property="og:description" content="华中科技大学机器人工程创新班学生，专注人工智能研究与开发。分享机器学习、Python、Web开发教程和创新项目。欢迎交流合作！🤖">
-    <meta property="og:image" content="https://wangfans248.github.io/images/wangxirui-share-card.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="WangXiRui - AI研究者个人主页">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Xirui Wang | HUST">
+    <meta property="og:description" content="Undergraduate researcher at Huazhong University of Science and Technology.">
     <meta property="og:url" content="https://wangfans248.github.io">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="WangXiRui 个人学术网站">
-    <meta property="og:locale" content="zh_CN">
-    
-    <!-- 微信分享优化 -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    <!-- 微信JS-SDK配置 (用于分享优化) -->
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    
-    <!-- 确保图片能被微信正确获取 -->
-    <link rel="image_src" href="https://wangfans248.github.io/images/wangxirui-share-card.png">
-    
-    <!-- 针对微信的特殊优化 -->
-    <meta name="applicable-device" content="pc,mobile">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="MobileOptimized" content="width">
-    <meta name="HandheldFriendly" content="true">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WangXiRui - AI研究者 & 技术探索者">
-    <meta name="twitter:description" content="华中科技大学机器人工程创新班学生，专注人工智能研究与开发。分享技术教程和创新项目。">
-    <meta name="twitter:image" content="https://wangfans248.github.io/images/wangxirui-share-card.png">
-    <meta name="twitter:creator" content="@wangfans248">
-    
-    <!-- 微博分享优化 -->
-    <meta property="weibo:title" content="WangXiRui - AI研究者 & 技术探索者">
-    <meta property="weibo:description" content="华中科技大学机器人工程创新班学生，专注人工智能研究与开发。分享技术教程和创新项目。">
-    <meta property="weibo:image" content="https://wangfans248.github.io/images/wangxirui-share-card.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://wangfans248.github.io">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/Designer.ico">
     
-    <!-- External Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome 图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        :root {
+            --cardinal: #8C1515;
+            --cardinal-dark: #6B1111;
+            --black: #2E2D29;
+            --gray-dark: #53565A;
+            --gray: #767676;
+            --gray-light: #D5D5D4;
+            --bg-light: #F9F9F9;
+            --white: #FFFFFF;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #FDF6EC;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        /* 主容器，确保内容横向排列 */
+        body {
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        a {
+            color: var(--cardinal);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout */
         .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        /* Header */
+        .header {
             display: flex;
-            flex-wrap: nowrap; /* 保持不换行 */
-            min-height: 100vh;
+            gap: 36px;
+            margin-bottom: 50px;
+            align-items: flex-start;
         }
 
-        /* 侧边栏样式 */
-        .sidebar {
-            width: 25%;
-            background-color: #800000;
-            color: white;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* 高于光效层级，遮挡溢出的光效 */
-        }
-        .sidebar img {
-        width: 120px; /* 设置头像的宽度 */
-        height: 120px; /* 设置头像的高度 */
-        border-radius: 50%; /* 让头像变成圆形 */
-        object-fit: cover; /* 确保头像图像不会变形 */
-        margin-bottom: 15px;
-        }
-        .designer-logo {
-        width: 50px;  /* 调整大小 */
-        height: 50px; /* 高度 */
-        margin-top: 20px; /* 上方空隙 */
-    }
-        .bio {
-        font-size: 16px;
-        line-height: 1.6;
-        color: white;
-        text-align: center;
-    }    
-        .bio span {
-        display: block;
-    }
-
-        .quote {
-        color: white;
-        font-size: 18px;
-        font-style: italic;
-        text-align: center;
-        margin-top: 20px;
-    }
-        /* 主要内容区 */
-        .main {
-            flex: 1; /* 填充剩余空间 */
-            min-width: 300px; /* 确保不会被挤压得太小 */
-            padding: 40px;
-            position: relative;
-            z-index: 0;
-        }
-
-        /* 导航栏样式 */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background-color: #A6192E;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 12px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        nav a i {
-            font-size: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        nav a:hover, nav a.active {
-            background-color: #800000;
-            border-radius: 5px;
-            transform: translateY(-2px);
-        }
-        
-        nav a:hover i, nav a.active i {
-            transform: scale(1.1);
-        }
-
-        /* 内容区域默认隐藏 */
-        .content {
-            display: none;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        /* 项目展示区域样式 */
-        .projects-container {
-            margin-top: 20px;
-            position: relative;
-        }
-
-        .project-category {
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: visible;
-            z-index: 1;
-        }
-
-        .project-category:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(128, 0, 0, 0.15);
-        }
-
-        /* 使用与原网站一致的深红色调色板 */
-        .project-category[data-category="tools"] {
-            border-left: 5px solid #800000;
-            background: linear-gradient(135deg, rgba(128, 0, 0, 0.08), rgba(255, 255, 255, 0.95));
-        }
-
-        .project-category[data-category="ai"] {
-            border-left: 5px solid #A6192E;
-            background: linear-gradient(135deg, rgba(166, 25, 46, 0.08), rgba(255, 255, 255, 0.95));
-        }
-
-        .project-category[data-category="web3"] {
-            border-left: 5px solid #B8860B;
-            background: linear-gradient(135deg, rgba(184, 134, 11, 0.08), rgba(255, 255, 255, 0.95));
-        }
-
-        .project-category[data-category="others"] {
-            border-left: 5px solid #D2691E;
-            background: linear-gradient(135deg, rgba(210, 105, 30, 0.08), rgba(255, 255, 255, 0.95));
-        }
-
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(128, 0, 0, 0.1);
-        }
-
-        .category-header h3 {
-            margin: 0;
-            font-size: 24px;
-            font-weight: 600;
-            color: #800000;
-        }
-
-        .category-count {
-            background: #800000;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        /* 横向滚动布局 */
-        .projects-scroll {
-            display: flex;
-            gap: 25px;
-            overflow-x: auto;
-            padding: 10px 5px 20px 5px;
-            scrollbar-width: none; /* 隐藏默认滚动条 */
-            -ms-overflow-style: none; /* IE 和 Edge */
-            position: relative;
-        }
-
-        .projects-scroll::-webkit-scrollbar {
-            display: none; /* 隐藏 webkit 滚动条 */
-        }
-
-        /* 自定义拖动栏容器 */
-        .scroll-track {
-            position: relative;
-            height: 6px;
-            background: rgba(128, 0, 0, 0.2);
-            border-radius: 3px;
-            margin-top: 15px;
-            cursor: pointer;
-            width: 100%;
-            display: block;
-        }
-
-        /* 拖动栏滑块 */
-        .scroll-thumb {
-            position: absolute;
-            height: 100%;
-            background: #A6192E;
-            border-radius: 3px;
-            cursor: grab;
-            transition: background-color 0.2s ease;
-            min-width: 30px;
-            top: 0;
-            left: 0;
-        }
-
-        .scroll-thumb:hover {
-            background: #800000;
-        }
-
-        .scroll-thumb:active {
-            cursor: grabbing;
-            background: #600000;
-        }
-
-        /* 确保滚动条始终可见用于测试 */
-        .scroll-track.always-visible {
-            background: rgba(128, 0, 0, 0.3);
-        }
-
-        .scroll-track.always-visible .scroll-thumb {
-            background: #800000;
-        }
-
-        /* 拖动栏容器包装器 */
-        .projects-wrapper {
-            position: relative;
-            overflow: visible;
-            z-index: 2;
-        }
-
-        /* 联系页面样式 */
-        .contact-intro {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 25px rgba(128, 0, 0, 0.1);
-            border: 1px solid rgba(128, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-intro::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(128, 0, 0, 0.05), transparent);
-            transition: left 0.6s;
-        }
-
-        .contact-intro:hover::before {
-            left: 100%;
-        }
-
-        .contact-avatar {
-            position: relative;
-            margin-right: 30px;
-        }
-
-        .contact-avatar img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 4px;
             object-fit: cover;
-            border: 4px solid #800000;
-            transition: all 0.3s ease;
-        }
-
-        .contact-avatar:hover img {
-            transform: scale(1.1);
-            box-shadow: 0 10px 30px rgba(128, 0, 0, 0.3);
-        }
-
-        .avatar-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(128, 0, 0, 0.2), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-avatar:hover .avatar-glow {
-            opacity: 1;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.1); opacity: 0.3; }
-            100% { transform: scale(1); opacity: 0.7; }
-        }
-
-        .contact-info h3 {
-            margin: 0 0 10px 0;
-            color: #800000;
-            font-size: 28px;
-            font-weight: 600;
-        }
-
-        .contact-info p {
-            margin: 0 0 15px 0;
-            color: #666;
-            font-size: 16px;
-        }
-
-        .status-indicator {
-            display: flex;
-            align-items: center;
-            color: #28a745;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #28a745;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: blink 2s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .contact-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            position: relative;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.1);
-            border: 1px solid rgba(128, 0, 0, 0.1);
-            overflow: visible; /* 允许图标动画超出边界 */
-            isolation: isolate;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(128, 0, 0, 0.2);
-            border-color: #A6192E;
-        }
-
-        .contact-card[data-type="email"]:hover { 
-            background: linear-gradient(135deg, rgba(166, 25, 46, 0.12), rgba(210, 0, 31, 0.08), white);
-            border-color: rgba(166, 25, 46, 0.4);
-        }
-        .contact-card[data-type="github"]:hover { 
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.12), rgba(160, 82, 45, 0.08), white);
-            border-color: rgba(139, 69, 19, 0.4);
-        }
-        .contact-card[data-type="blog"]:hover { 
-            background: linear-gradient(135deg, rgba(147, 51, 234, 0.12), rgba(168, 85, 247, 0.08), white);
-            border-color: rgba(147, 51, 234, 0.4);
-        }
-        .contact-card[data-type="tech"]:hover { 
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(37, 99, 235, 0.08), white);
-            border-color: rgba(59, 130, 246, 0.4);
-        }
-        .contact-card[data-type="collaboration"]:hover { 
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(22, 163, 74, 0.08), white);
-            border-color: rgba(34, 197, 94, 0.4);
-        }
-        .contact-card[data-type="social"]:hover { 
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.12), rgba(234, 88, 12, 0.08), white);
-            border-color: rgba(249, 115, 22, 0.4);
-        }
-
-        .card-glow {
-            position: absolute;
-            top: 0;
-            left: -120%;
-            width: 120%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent 0%, transparent 25%, rgba(255, 255, 255, 0.08) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.08) 55%, transparent 75%, transparent 100%);
-            transition: left 0.6s ease-out;
-            pointer-events: none;
-            z-index: 1;
-            border-radius: 16px;
-        }
-
-        .contact-card:hover .card-glow {
-            left: 100%;
-        }
-
-        .contact-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-            display: block;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative;
-            z-index: 10;
-        }
-        
-        .contact-icon i {
-            background: linear-gradient(135deg, #800000, #A6192E);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transition: all 0.3s ease;
-        }
-
-        .contact-card:hover .contact-icon {
-            transform: scale(1.25) rotate(15deg) translateY(-5px);
-            text-shadow: 0 0 30px rgba(166, 25, 46, 0.8);
-            filter: drop-shadow(0 8px 20px rgba(166, 25, 46, 0.4));
-        }
-
-        .contact-details {
-            position: relative;
-            z-index: 2; /* 确保内容在光效之上 */
-        }
-
-        .contact-details h4 {
-            margin: 0 0 8px 0;
-            color: #800000;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .contact-details p {
-            margin: 0 0 20px 0;
-            color: #666;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-
-        .contact-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .action-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 15px;
-            background: #A6192E;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .action-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -110%;
-            width: 110%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent 0%, transparent 25%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.1) 55%, transparent 75%, transparent 100%);
-            transition: left 0.4s ease-out;
-            pointer-events: none;
-            border-radius: 8px;
-        }
-
-        .action-btn:hover::before {
-            left: 100%;
-        }
-
-        .action-btn:hover {
-            background: #800000;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(166, 25, 46, 0.3);
-        }
-
-        .btn-icon {
-            font-size: 14px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 50%;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            transform: translateY(-3px) scale(1.1);
-            background: #800000;
-            border-color: #800000;
-            box-shadow: 0 8px 20px rgba(128, 0, 0, 0.3);
-        }
-
-        .contact-footer {
-            text-align: center;
-            background: rgba(128, 0, 0, 0.05);
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid rgba(128, 0, 0, 0.1);
-        }
-
-        .contact-footer p {
-            margin: 0 0 15px 0;
-            color: #800000;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .response-time {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .time-icon {
-            animation: tick 1s infinite;
-        }
-
-        @keyframes tick {
-            0%, 50% { transform: rotate(0deg); }
-            51%, 100% { transform: rotate(6deg); }
-        }
-
-        /* 新增联系页面元素样式 */
-        .contact-email {
-            color: #A6192E;
-            font-family: 'Courier New', monospace;
-            font-weight: 500;
-            background: rgba(166, 25, 46, 0.1);
-            padding: 8px 12px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(166, 25, 46, 0.2);
-            font-size: 14px;
-        }
-
-        .github-note {
-            color: #A6192E;
-            font-size: 13px;
-            font-style: italic;
-            margin-bottom: 15px;
-            padding: 5px 10px;
-            background: rgba(166, 25, 46, 0.1);
-            border-radius: 4px;
-            border-left: 3px solid #A6192E;
-        }
-        
-        .blog-note, .tech-note {
-            color: #666;
-            font-size: 12px;
-            font-style: italic;
-            margin-bottom: 15px;
-            padding: 5px 10px;
-            background: rgba(128, 0, 0, 0.05);
-            border-radius: 4px;
-            border-left: 3px solid #A6192E;
-        }
-
-        .action-btn.primary {
-            background: linear-gradient(135deg, #A6192E, #D2001F);
-            font-weight: 600;
-        }
-
-        .action-btn.primary:hover {
-            background: linear-gradient(135deg, #D2001F, #FF6B6B);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(166, 25, 46, 0.4);
-        }
-
-        /* 社交媒体网格 */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-            justify-items: center;
-        }
-
-        .social-btn[data-platform] {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: rgba(166, 25, 46, 0.05);
-            border: 2px solid rgba(166, 25, 46, 0.2);
-            border-radius: 12px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-                 .social-btn[data-platform]::before {
-             content: '';
-             position: absolute;
-             top: 0;
-             left: -110%;
-             width: 110%;
-             height: 100%;
-             background: linear-gradient(90deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.08) 45%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.08) 55%, transparent 70%, transparent 100%);
-             transition: left 0.5s ease-out;
-             pointer-events: none;
-             border-radius: 8px;
-         }
-
-         .social-btn[data-platform]:hover::before {
-             left: 100%;
-         }
-
-        .social-btn[data-platform="youtube"]:hover {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.12), white);
-            border-color: rgba(255, 0, 0, 0.4);
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
-        }
-
-        .social-btn[data-platform="linkedin"]:hover {
-            background: linear-gradient(135deg, rgba(0, 119, 181, 0.12), white);
-            border-color: rgba(0, 119, 181, 0.4);
-            box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
-        }
-
-        .social-btn[data-platform="reddit"]:hover {
-            background: linear-gradient(135deg, rgba(255, 69, 0, 0.12), white);
-            border-color: rgba(255, 69, 0, 0.4);
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
-        }
-
-        .social-btn[data-platform="wechat"]:hover {
-            background: linear-gradient(135deg, rgba(7, 193, 96, 0.12), white);
-            border-color: rgba(7, 193, 96, 0.4);
-            box-shadow: 0 4px 15px rgba(7, 193, 96, 0.3);
-        }
-
-        .social-btn[data-platform="xiaohongshu"]:hover {
-            background: linear-gradient(135deg, rgba(255, 46, 99, 0.12), white);
-            border-color: rgba(255, 46, 99, 0.4);
-            box-shadow: 0 4px 15px rgba(255, 46, 99, 0.3);
-        }
-
-        .social-btn[data-platform="zhihu"]:hover {
-            background: linear-gradient(135deg, rgba(0, 132, 255, 0.12), white);
-            border-color: rgba(0, 132, 255, 0.4);
-            box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3);
-        }
-
-        .social-btn[data-platform]:hover {
-            transform: translateY(-2px) scale(1.05);
-        }
-
-        .social-icon {
-            font-size: 28px;
-        }
-        
-        /* 社交媒体图标品牌颜色 */
-        .social-btn[data-platform="youtube"] .social-icon i {
-            color: #FF0000;
-        }
-        
-        .social-btn[data-platform="linkedin"] .social-icon i {
-            color: #0077B5;
-        }
-        
-        .social-btn[data-platform="reddit"] .social-icon i {
-            color: #FF4500;
-        }
-        
-        .social-btn[data-platform="wechat"] .social-icon i {
-            color: #07C160;
-        }
-        
-        .social-btn[data-platform="xiaohongshu"] .social-icon i {
-            color: #FF2E63;
-        }
-        
-        .social-btn[data-platform="zhihu"] .social-icon i {
-            color: #0084FF;
-        }
-        
-        /* 悬停时图标颜色变化 */
-        .social-btn[data-platform]:hover .social-icon i {
-            color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .social-name {
-            font-weight: 500;
-        }
-
-        .project-card {
-            position: relative;
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 3px 10px rgba(128, 0, 0, 0.15);
-            min-width: 200px;
             flex-shrink: 0;
-            border: 1px solid rgba(128, 0, 0, 0.1);
-            overflow: visible;
-            isolation: isolate;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(128, 0, 0, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .project-card:hover::before {
-            left: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(128, 0, 0, 0.25);
-            border-color: #A6192E;
-            z-index: 100;
-        }
-
-        .project-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-        
-        .project-icon i {
-            background: linear-gradient(135deg, #800000, #A6192E);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transition: all 0.3s ease;
-        }
-        
-        /* 特定项目图标颜色 */
-        .project-card[data-project="automation-scripts"] .project-icon i {
-            background: linear-gradient(135deg, #10B981, #059669);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="data-visualizer"] .project-icon i {
-            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="virtual-pet"] .project-icon i {
-            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="ai-assistant"] .project-icon i {
-            background: linear-gradient(135deg, #F59E0B, #D97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="web3-dapp"] .project-icon i {
-            background: linear-gradient(135deg, #627EEA, #4F46E5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="cal-analyse"] .project-icon i {
-            background: linear-gradient(135deg, #10B981, #059669);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="fast-cal"] .project-icon i {
-            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="nft-creator"] .project-icon i {
-            background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .project-card[data-project="coming-soon"] .project-icon i {
-            background: linear-gradient(135deg, #F59E0B, #D97706);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .project-card:hover .project-icon {
-            transform: scale(1.2) rotate(5deg);
-        }
-
-        .project-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: #800000;
-            margin-bottom: 10px;
-        }
-
-        /* 简介覆盖在项目卡片上 */
-        .project-tooltip {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(128, 0, 0, 0.95);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 200;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-            pointer-events: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            backdrop-filter: blur(2px);
-        }
-
-        /* 禁用CSS hover，改为JavaScript控制 */
-
-        .project-tooltip h4 {
-            margin: 0 0 8px 0;
-            font-size: 16px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .project-tooltip p {
-            margin: 0 0 12px 0;
-            font-size: 14px;
-            line-height: 1.4;
-            color: #f0f0f0;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.25);
-            color: white;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            font-weight: 500;
-        }
-
-        /* 响应式布局：小屏幕时侧边栏变成上方导航 */
-        @media (max-width: 800px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                padding: 15px;
-                /* 确保AI助手对话框在移动端可见 */
-            }
-            
-            .sidebar .bio {
-                font-size: 14px;
-                line-height: 1.5;
-            }
-            
-            .sidebar .quote {
-                font-size: 16px;
-                margin-top: 15px;
-            }
-            
-            /* AI助手对话框移动端优化 */
-            .sidebar div[onclick="openFansbotChat()"] {
-                margin-top: 20px !important;
-                padding: 12px !important;
-                background: rgba(255, 255, 255, 0.1) !important;
-                border-radius: 12px !important;
-                cursor: pointer !important;
-                transition: all 0.3s ease !important;
-                display: block !important;
-                visibility: visible !important;
-            }
-            
-            .sidebar div[onclick="openFansbotChat()"] p {
-                margin: 0 !important;
-                font-size: 13px !important;
-                color: white !important;
-                text-align: center !important;
-            }
-            
-            .sidebar div[onclick="openFansbotChat()"] span {
-                display: block !important;
-                font-size: 11px !important;
-                opacity: 0.9 !important;
-            }
-            
-            .main {
-                width: 100%;
-                padding: 20px;
-            }
-            
-            .projects-scroll {
-                gap: 18px;
-                padding: 10px 3px 20px 3px;
-            }
-            
-            .project-card {
-                min-width: 160px;
-            }
-            
-            .project-tooltip {
-                padding: 12px;
-            }
-            
-            .project-tooltip h4 {
-                font-size: 14px;
-            }
-            
-            .project-tooltip p {
-                font-size: 12px;
-                margin-bottom: 8px;
-            }
-            
-            .project-category {
-                padding: 20px 15px;
-                margin-bottom: 30px;
-            }
-            
-            .category-header h3 {
-                font-size: 20px;
-            }
-            
-            .scroll-track {
-                height: 4px;
-            }
-            
-            .tag {
-                font-size: 10px;
-                padding: 2px 6px;
-            }
-            
-            /* 联系页面响应式设计 */
-            .contact-intro {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .contact-avatar {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-            
-            .contact-avatar img {
-                width: 80px;
-                height: 80px;
-            }
-            
-            .contact-info h3 {
-                font-size: 24px;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .contact-card {
-                padding: 20px;
-            }
-            
-            .contact-icon {
-                font-size: 40px;
-            }
-            
-            .contact-details h4 {
-                font-size: 18px;
-            }
-            
-            .contact-details p {
-                font-size: 13px;
-            }
-            
-            .contact-email {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-            
-            .github-note {
-                font-size: 11px;
-                padding: 4px 8px;
-            }
-            
-            .action-btn {
-                font-size: 12px;
-                padding: 8px 15px;
-            }
-            
-            .action-btn.primary {
-                font-size: 12px;
-                font-weight: 600;
-            }
-            
-            .social-grid {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 10px;
-            }
-            
-            .social-btn[data-platform] {
-                width: 50px;
-                height: 50px;
-            }
-            
-            .social-icon {
-                font-size: 24px;
-            }
-            
-            .contact-footer {
-                padding: 20px 15px;
-            }
-        }
-
-        /* LinkedIn风格时间线样式 */
-        .timeline-section {
-            margin-bottom: 40px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(253, 246, 236, 0.5));
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(128, 0, 0, 0.08);
-            border: 1px solid rgba(166, 25, 46, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(166, 25, 46, 0.15);
-            background: linear-gradient(90deg, rgba(128, 0, 0, 0.03), transparent);
-            padding: 10px 0 15px 0;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .section-header h3 {
-            margin: 0;
-            font-size: 26px;
+        .header-info h1 {
+            font-size: 32px;
             font-weight: 700;
-            background: linear-gradient(135deg, #800000, #A6192E);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .section-icon {
-            font-size: 24px;
-        }
-
-        .timeline-item {
-            display: flex;
-            gap: 35px;
-            margin-bottom: 30px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(128, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .timeline-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .timeline-logo {
-            flex-shrink: 0;
-            width: 56px;
-            height: 56px;
-        }
-
-        .company-logo {
-            width: 56px;
-            height: 56px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 20px;
-            color: white;
-            border: 2px solid rgba(128, 0, 0, 0.1);
-        }
-
-        .coursfy-logo {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        }
-
-        .lund-logo {
-            background: linear-gradient(135deg, #0ea5e9, #06b6d4);
-        }
-
-        .bytedance-logo {
-            background: linear-gradient(135deg, #ef4444, #f97316);
-        }
-
-        .copper-logo {
-            background: linear-gradient(135deg, #059669, #10b981);
-        }
-
-        .weibo-logo {
-            background: linear-gradient(135deg, #dc2626, #ea580c);
-        }
-
-        .hust-logo {
-            background: linear-gradient(135deg, #800000, #A6192E);
-        }
-
-        /* 大学Logo样式 */
-        .university-logo {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            object-fit: contain;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.9));
-            padding: 6px;
-            border: none;
-            box-shadow: 0 4px 15px rgba(128, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .university-logo:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(128, 0, 0, 0.25);
-        }
-
-        .timeline-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .position-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: #333;
+            color: var(--black);
             margin-bottom: 8px;
-            line-height: 1.3;
         }
 
-        /* 大学名称样式 */
-        .timeline-item .position-title {
-            color: #333;
-            font-weight: 600;
+        .header-info .subtitle {
             font-size: 18px;
+            color: var(--gray-dark);
+            margin-bottom: 16px;
         }
 
-        .company-info {
+        .header-info .contact-links {
             display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 6px;
             flex-wrap: wrap;
+            gap: 16px;
+            font-size: 15px;
         }
 
-        .company-name {
-            font-size: 16px;
-            font-weight: 600;
-            background: linear-gradient(135deg, #800000, #A6192E);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .header-info .contact-links a {
+            color: var(--cardinal);
         }
 
-        .employment-type, .degree-type, .major {
-            font-size: 14px;
-            color: #666;
-            background: rgba(128, 0, 0, 0.08);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-weight: 500;
+        .header-info .contact-links span {
+            color: var(--gray-light);
         }
 
-        /* 专业名称样式 */
-        .major {
-            background: rgba(128, 0, 0, 0.08);
-            color: #800000;
-            font-weight: 600;
-            border: 1px solid rgba(128, 0, 0, 0.2);
+        /* Sections */
+        .section {
+            margin-bottom: 40px;
         }
 
-        .duration {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 6px;
-            font-weight: 500;
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--cardinal);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--cardinal);
         }
 
-        .location {
-            font-size: 14px;
-            color: #888;
+        .section-content {
+            color: var(--black);
+        }
+
+        .section-content p {
             margin-bottom: 12px;
         }
 
-        .job-description {
-            font-size: 15px;
-            color: #444;
-            line-height: 1.5;
-            margin-bottom: 15px;
+        .section-content p:last-child {
+            margin-bottom: 0;
         }
 
-        .additional-info {
-            margin-bottom: 15px;
+        /* Research Interests */
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .gpa-info, .activities {
+        .interest-tag {
+            background-color: var(--bg-light);
+            border: 1px solid var(--gray-light);
+            padding: 6px 14px;
+            border-radius: 4px;
             font-size: 14px;
-            color: #666;
+            color: var(--gray-dark);
+        }
+
+        /* News */
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-date {
+            flex-shrink: 0;
+            color: var(--gray);
+            font-size: 14px;
+            min-width: 90px;
+        }
+
+        .news-content {
+            color: var(--black);
+        }
+
+        /* Timeline Items (Education, Experience) */
+        .timeline-item {
+            margin-bottom: 24px;
+            padding-left: 0;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-bottom: 4px;
         }
 
-        /* DIAN团队样式 */
-        .dian-team {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px !important;
-            margin-top: 8px;
-        }
-
-        .team-icon {
+        .timeline-title {
+            font-weight: 600;
+            color: var(--black);
             font-size: 16px;
         }
 
-        .team-text {
-            font-weight: 600;
-            color: #666;
+        .timeline-date {
             font-size: 14px;
+            color: var(--gray);
         }
 
-        .team-badge {
-            background: rgba(128, 0, 0, 0.08);
-            color: #800000;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .skill-tag {
-            background: rgba(128, 0, 0, 0.1);
-            color: #800000;
-            padding: 4px 10px;
-            border-radius: 16px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(128, 0, 0, 0.2);
-            transition: all 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            background: rgba(128, 0, 0, 0.15);
-            transform: translateY(-1px);
-        }
-
-        /* 个人简介样式 */
-        .personal-intro {
-            background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(255, 255, 255, 0.95));
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid rgba(128, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        
-        .intro-content h4 {
-            color: #800000;
-            font-size: 1.3em;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .intro-content p {
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 25px;
-            font-size: 1.05em;
-        }
-        
-        .research-interests h5 {
-            color: #800000;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .interest-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
-            border: 1px solid rgba(128, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(128, 0, 0, 0.05);
-        }
-        
-        .interest-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(128, 0, 0, 0.15);
-            border-color: rgba(128, 0, 0, 0.2);
-        }
-        
-        .interest-icon {
-            font-size: 1.8em;
-            margin-top: 2px;
-            filter: drop-shadow(0 0 5px rgba(128, 0, 0, 0.2));
-        }
-        
-        .interest-text strong {
-            display: block;
-            color: #800000;
-            font-size: 1.05em;
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-        
-        .interest-text span {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        /* 技能网格布局 */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .skill-category {
-            background: rgba(128, 0, 0, 0.02);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid rgba(128, 0, 0, 0.1);
-        }
-
-        .skill-category h4 {
-            margin: 0 0 15px 0;
-            font-size: 16px;
-            font-weight: 600;
-            color: #800000;
-        }
-
-        .skill-items {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .skill-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(128, 0, 0, 0.05);
-        }
-
-        .skill-item:last-child {
-            border-bottom: none;
-        }
-
-        .skill-name {
+        .timeline-subtitle {
             font-size: 15px;
-            font-weight: 500;
-            color: #333;
+            color: var(--gray-dark);
+            font-style: italic;
+            margin-bottom: 6px;
         }
 
-        .skill-endorsements, .skill-level {
+        .timeline-desc {
+            font-size: 15px;
+            color: var(--gray-dark);
+            line-height: 1.5;
+        }
+
+        .timeline-desc ul {
+            margin: 8px 0 0 20px;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 4px;
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        .pub-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .pub-authors {
+            font-size: 15px;
+            color: var(--gray-dark);
+        }
+
+        .pub-authors .me {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .pub-venue {
+            font-size: 14px;
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        .pub-status {
+            display: inline-block;
+            background-color: var(--bg-light);
+            border: 1px solid var(--gray-light);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: var(--gray);
+            font-style: normal;
+            margin-left: 4px;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 20px;
+        }
+
+        .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: var(--black);
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .project-desc {
+            font-size: 15px;
+            color: var(--gray-dark);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-light);
+            text-align: center;
             font-size: 13px;
-            color: #666;
-            background: rgba(128, 0, 0, 0.08);
-            padding: 3px 8px;
-            border-radius: 10px;
-            font-weight: 500;
+            color: var(--gray);
         }
 
-        /* 技能图标样式 */
-        .skills-icons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .skill-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(128, 0, 0, 0.1);
-            border: 1px solid rgba(128, 0, 0, 0.2);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .skill-icon:hover {
-            background: rgba(128, 0, 0, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(128, 0, 0, 0.2);
-        }
-
-                 .skill-icon:hover::after {
-             content: attr(title);
-             position: absolute;
-             bottom: -30px;
-             left: 50%;
-             transform: translateX(-50%);
-             background: rgba(0, 0, 0, 0.8);
-             color: white;
-             padding: 4px 8px;
-             border-radius: 4px;
-             font-size: 12px;
-             white-space: nowrap;
-             z-index: 1000;
-         }
-
-         /* 简洁技能展示样式 */
-         .skills-compact {
-             display: grid;
-             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-             gap: 20px;
-             margin-top: 20px;
-         }
-
-         .skill-category-compact {
-             background: rgba(128, 0, 0, 0.02);
-             border-radius: 12px;
-             padding: 20px;
-             border: 1px solid rgba(128, 0, 0, 0.1);
-         }
-
-         .skill-category-compact h4 {
-             margin: 0 0 15px 0;
-             font-size: 16px;
-             font-weight: 600;
-             color: #800000;
-             position: relative;
-             padding-left: 25px;
-         }
-
-         .skill-category-compact h4::before {
-             content: '';
-             position: absolute;
-             left: 0;
-             top: 50%;
-             transform: translateY(-50%);
-             width: 4px;
-             height: 20px;
-             border-radius: 2px;
-             background: linear-gradient(135deg, #800000, #A6192E);
-         }
-
-         .skill-tags {
-             display: flex;
-             flex-wrap: wrap;
-             gap: 8px;
-         }
-
-         /* 不同技能分类的主题色 */
-         .skill-category-compact:nth-child(1) {
-             border-left: 3px solid #4A90E2;
-         }
-
-         .skill-category-compact:nth-child(1) h4::before {
-             background: linear-gradient(135deg, #4A90E2, #357ABD);
-         }
-
-         .skill-category-compact:nth-child(1) .skill-tag {
-             background: rgba(74, 144, 226, 0.1);
-             color: #357ABD;
-             border-color: rgba(74, 144, 226, 0.3);
-         }
-
-         .skill-category-compact:nth-child(2) {
-             border-left: 3px solid #7B68EE;
-         }
-
-         .skill-category-compact:nth-child(2) h4::before {
-             background: linear-gradient(135deg, #7B68EE, #6A5ACD);
-         }
-
-         .skill-category-compact:nth-child(2) .skill-tag {
-             background: rgba(123, 104, 238, 0.1);
-             color: #6A5ACD;
-             border-color: rgba(123, 104, 238, 0.3);
-         }
-
-         .skill-category-compact:nth-child(3) {
-             border-left: 3px solid #50C878;
-         }
-
-         .skill-category-compact:nth-child(3) h4::before {
-             background: linear-gradient(135deg, #50C878, #228B22);
-         }
-
-         .skill-category-compact:nth-child(3) .skill-tag {
-             background: rgba(80, 200, 120, 0.1);
-             color: #228B22;
-             border-color: rgba(80, 200, 120, 0.3);
-         }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .timeline-section {
-                padding: 20px;
-                margin-bottom: 25px;
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 20px;
             }
 
-            .timeline-item {
+            .header {
                 flex-direction: column;
-                gap: 15px;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
             }
 
-            .timeline-logo {
-                align-self: flex-start;
-                width: 48px;
-                height: 48px;
+            .profile-photo {
+                width: 120px;
+                height: 120px;
             }
 
-            .company-logo {
-                width: 48px;
-                height: 48px;
+            .header-info h1 {
+                font-size: 26px;
+            }
+
+            .header-info .contact-links {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .section-title {
                 font-size: 18px;
             }
-
-            .position-title {
-                font-size: 16px;
-            }
-
-            .company-info {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .skill-category {
-                padding: 15px;
-            }
-
-            /* 个人简介移动端样式 */
-            .personal-intro {
-                padding: 20px;
-                margin-bottom: 15px;
-            }
-
-            .interests-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .interest-item {
-                padding: 15px;
-            }
-
-            .interest-icon {
-                font-size: 1.5em;
-            }
-
-            /* DIAN团队移动端优化 */
-            .dian-team {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 4px;
-            }
-
-            .team-icon {
-                align-self: flex-start;
-            }
-
-            /* 技能分类移动端优化 */
-            .skills-compact {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .skill-category-compact {
-                padding: 15px;
-            }
-
-            .skill-category-compact h4 {
-                font-size: 15px;
-                padding-left: 20px;
-            }
-        }
-
-        /* 图标自定义指南 */
-        .timeline-section.icon-guide {
-            background: linear-gradient(135deg, rgba(128, 0, 0, 0.05), rgba(255, 255, 255, 0.95));
-            border-left: 4px solid #800000;
-        }
-
-        .section-header.icon-guide {
-            color: #800000;
-        }
-
-        .icon-guide {
-            padding: 20px;
-        }
-
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .guide-item {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(128, 0, 0, 0.1);
-            border: 1px solid rgba(128, 0, 0, 0.1);
-        }
-
-        .guide-item h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            font-weight: 600;
-            color: #800000;
-        }
-
-        .guide-item p {
-            margin: 0 0 15px 0;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .code-example {
-            background: rgba(128, 0, 0, 0.05);
-            border-radius: 6px;
-            padding: 5px 10px;
-            font-size: 12px;
-            color: #800000;
-        }
-
-        .guide-note {
-            color: #666;
-            font-size: 12px;
-        }
-
-        .icon-examples {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-                 .icon-examples span {
-             display: flex;
-             align-items: center;
-             gap: 5px;
-             font-size: 12px;
-             color: #666;
-             background: rgba(128, 0, 0, 0.08);
-             padding: 4px 8px;
-             border-radius: 8px;
-             flex-wrap: wrap;
-         }
-         
-         .icon-examples span i {
-             color: #800000;
-             font-size: 14px;
-         }
-         
-         .code-text {
-             font-family: 'Courier New', monospace;
-             font-size: 11px;
-             line-height: 1.4;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 侧边栏 -->
-        <div class="sidebar">
-            <img src="images/Profile.jpg" alt="Profile Picture">
-            <h2>WangXiRui (Wangfans)</h2>
-            <p class="bio">
-            <span>🔬 Researcher & Explorer</span><br>
-            <span>🎓 AI & Robotics & Web3 & Anything Interesting</span><br>
-            <span>📍 Huazhong University of Science and Technology</span>
-            </p>
+        <!-- Header -->
+        <header class="header">
+            <img src="images/Profile.jpg" alt="Xirui Wang" class="profile-photo">
+            <div class="header-info">
+                <h1>Xirui Wang</h1>
+                <p class="subtitle">Undergraduate Researcher, Huazhong University of Science and Technology</p>
+                <div class="contact-links">
+                    <a href="mailto:wangfansheng@hust.edu.cn">Email</a>
+                    <span>|</span>
+                    <a href="https://github.com/wangfans248" target="_blank">GitHub</a>
+                    <span>|</span>
+                    <a href="cv.pdf" target="_blank">CV</a>
+                </div>
+            </div>
+        </header>
 
-            <p class="quote">My value lies not in perfection, but in potential and the ability to act.</p>
-            
-            <!-- AI对话邀请 -->
-            <div style="margin-top: 30px; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; cursor: pointer; transition: all 0.3s ease;" onclick="openFansbotChat()" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'">
-                <p style="margin: 0; font-size: 14px; color: white; text-align: center;">
-                    <span style="display: block; margin-bottom: 5px;">Wanna talk? → 🤖</span>
-                    <span style="font-size: 12px; opacity: 0.8;">想要聊天吗？→ 点击🤖</span>
+        <!-- About -->
+        <section class="section">
+            <h2 class="section-title">About</h2>
+            <div class="section-content">
+                <p>
+                    I am an undergraduate student in Robotics Engineering at <a href="https://www.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology (HUST)</a>, expected to graduate in 2028.
+                </p>
+                <p>
+                    I am interested in how intelligent systems acquire structured understanding of the world—moving beyond surface-level pattern recognition toward models that reason, adapt, and interact in a principled way. Currently, I am exploring <strong>structural anomaly detection</strong>, <strong>controllable image generation</strong>, and the application of <strong>reinforcement learning in diffusion models</strong>.
+                </p>
+                <p>
+                    I am actively seeking research opportunities for Summer 2026. Feel free to reach out!
                 </p>
             </div>
+        </section>
+
+        <!-- News -->
+        <section class="section">
+            <h2 class="section-title">News</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">[Dec 2024]</span>
+                    <span class="news-content">Working on a survey paper on unsupervised industrial anomaly detection.</span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">[2025]</span>
+                    <span class="news-content">Started research internship at School of Computer Science, HUST, focusing on diffusion-based image inpainting.</span>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">[2024]</span>
+                    <span class="news-content">Began undergraduate studies at HUST in Robotics Engineering.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Research Interests -->
+        <section class="section">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-list">
+                <span class="interest-tag">Structural Representations</span>
+                <span class="interest-tag">Controllable Generation</span>
+                <span class="interest-tag">Reinforcement Learning</span>
+                <span class="interest-tag">Diffusion Models</span>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Huazhong University of Science and Technology</span>
+                    <span class="timeline-date">2024 – 2028 (Expected)</span>
+                </div>
+                <div class="timeline-subtitle">B.Eng. in Robotics Engineering</div>
+                <div class="timeline-desc">
+                    Relevant coursework: Machine Learning, Data Science, Probability and Statistics
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Experience -->
+        <section class="section">
+            <h2 class="section-title">Research Experience</h2>
             
-            <img src="images/Designer.png" alt="Designer Logo" class="designer-logo">
-        </div>
-
-        <!-- 主要内容区 -->
-        <div class="main">
-            <nav>
-                <a href="#" onclick="showContent(event, 'cv')"><i class="fas fa-user"></i> About</a>
-                <a href="#" onclick="showContent(event, 'publications')"><i class="fas fa-book"></i> Publications</a>
-                <a href="#" onclick="showContent(event, 'projects')"><i class="fas fa-rocket"></i> Projects</a>
-                <a href="#" onclick="showContent(event, 'contact')"><i class="fas fa-envelope"></i> Contact</a>
-            </nav>
-
-            <div id="cv" class="content active">
-                <h2>About & Background</h2>
-                
-
-                
-                <!-- Education Section -->
-                <div class="timeline-section">
-                    <div class="section-header">
-                        <h3>Education</h3>
-                        <div class="section-icon">🎓</div>
-                    </div>
-                    
-                    <div class="timeline-item">
-                        <div class="timeline-logo">
-                            <img src="images/华科标志.png" alt="HUST Logo" class="university-logo">
-                        </div>
-                        <div class="timeline-content">
-                            <div class="position-title">Huazhong University of Science and Technology</div>
-                            <div class="company-info">
-                                <span class="degree-type">Bachelor of Engineering</span>
-                                <span class="major">Robotics Engineering (Innovation Class)</span>
-                            </div>
-                            <div class="duration">Aug 2024 - Present</div>
-                            <div class="location">Wuhan, Hubei, China</div>
-                            <div class="additional-info">
-                                <div class="activities dian-team">
-                                    <span class="team-icon">⚡</span>
-                                    <span class="team-text">DIAN Team Member</span>
-                                    <span class="team-badge">Innovation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                </div>
-                
-                <!-- Skills Section -->
-                <div class="timeline-section">
-                    <div class="section-header">
-                        <h3>Skills</h3>
-                        <div class="section-icon">⚡</div>
-                    </div>
-                    
-                    <div class="skills-compact">
-                        <div class="skill-category-compact">
-                            <h4>Robotics</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">ROS</span>
-                                <span class="skill-tag">Control Algorithms</span>
-                                <span class="skill-tag">Path Planning</span>
-                                <span class="skill-tag">SLAM</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category-compact">
-                            <h4>Programming & AI</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">C/C++</span>
-                                <span class="skill-tag">Machine Learning</span>
-                                <span class="skill-tag">Computer Vision</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category-compact">
-                            <h4>Tools & Frameworks</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">MATLAB</span>
-                                <span class="skill-tag">PyTorch</span>
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">Linux</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Independent Research</span>
+                    <span class="timeline-date">2025 – Present</span>
+                </div>
+                <div class="timeline-subtitle">School of Mechanical Science and Engineering, HUST</div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>Working on unsupervised anomaly detection for industrial manufacturing with highly localized, subtle defects.</li>
+                        <li>Designed a W-shaped encoder–decoder with prototype-guided fusion; applied contrastive supervision and anomaly injection to stabilize latent representations.</li>
+                        <li>Authoring a comprehensive survey on unsupervised industrial anomaly detection methods.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div id="publications" class="content">
-                <h2>Publications</h2>
-                <p>Coming soon...</p>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Research Intern</span>
+                    <span class="timeline-date">2025 – Present</span>
+                </div>
+                <div class="timeline-subtitle">School of Computer Science and Technology, HUST</div>
+                <div class="timeline-desc">
+                    <ul>
+                        <li>Researching diffusion-based image inpainting and human-preference modeling.</li>
+                        <li>Built a large-scale data pipeline (~24,000 images) and trained LoRA modules for task-specific inpainting.</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
-            <div id="projects" class="content">
-                <h2>Projects</h2>
-                
-                <!-- 项目分类展示区域 -->
-                <div class="projects-container">
-                    <!-- Utility Tools -->
-                    <div class="project-category" data-category="tools">
-                        <div class="category-header">
-                            <h3>🔧 Utility Tools</h3>
-                            <span class="category-count">3</span>
-                        </div>
-                        <div class="projects-wrapper">
-                            <div class="projects-scroll">
-                                <div class="project-card" data-project="cal-analyse">
-                                    <div class="project-icon"><i class="fas fa-calendar-alt"></i></div>
-                                    <div class="project-name">CalAnalyse</div>
-                                    <div class="project-tooltip">
-                                        <h4>Calendar Data & Life Habits Analyzer</h4>
-                                        <p>Analyze calendar data and life habits for time management insights.</p>
-                                        <div class="project-tags">
-                                            <span class="tag">Swift</span>
-                                            <span class="tag">SwiftUI</span>
-                                            <span class="tag">Data Analysis</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="project-card" data-project="fast-cal">
-                                    <div class="project-icon"><i class="fas fa-microphone"></i></div>
-                                    <div class="project-name">FastCal</div>
-                                    <div class="project-tooltip">
-                                        <h4>AI-Powered Todo List Creator</h4>
-                                        <p>Voice and image-based todo creation with AI integration.</p>
-                                        <div class="project-tags">
-                                            <span class="tag">AI Integration</span>
-                                            <span class="tag">Voice Recognition</span>
-                                            <span class="tag">Image Processing</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="project-card" data-project="personal-website">
-                                    <div class="project-icon"><i class="fas fa-globe"></i></div>
-                                    <div class="project-name">Academic Website</div>
-                                    <div class="project-tooltip">
-                                        <h4>Personal Academic Portfolio</h4>
-                                        <p>Responsive academic website with AI chat functionality.</p>
-                                        <div class="project-tags">
-                                            <span class="tag">HTML5</span>
-                                            <span class="tag">CSS3</span>
-                                            <span class="tag">JavaScript</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-track">
-                                <div class="scroll-thumb"></div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Publications -->
+        <section class="section">
+            <h2 class="section-title">Publications</h2>
+            <div class="pub-item">
+                <div class="pub-title">Unsupervised Anomaly Detection in Industry: Progress, Trends, and Future Avenues</div>
+                <div class="pub-authors"><span class="me">Xirui Wang</span>, et al.</div>
+                <div class="pub-venue">Manuscript in preparation <span class="pub-status">Expected Dec 2025</span></div>
+            </div>
+        </section>
 
-                    <!-- AI Development -->
-                    <div class="project-category" data-category="ai">
-                        <div class="category-header">
-                            <h3>🤖 AI Development</h3>
-                            <span class="category-count">1</span>
-                        </div>
-                        <div class="projects-wrapper">
-                            <div class="projects-scroll">
-                                <div class="project-card" data-project="ai-assistant">
-                                    <div class="project-icon"><i class="fas fa-brain"></i></div>
-                                    <div class="project-name">AI Assistant</div>
-                                    <div class="project-tooltip">
-                                        <h4>AI Assistant</h4>
-                                        <p>Multimodal AI assistant with text, voice, and image understanding.</p>
-                                        <div class="project-tags">
-                                            <span class="tag">NLP</span>
-                                            <span class="tag">Multimodal</span>
-                                            <span class="tag">PyTorch</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-track">
-                                <div class="scroll-thumb"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Web3 Projects -->
-                    <div class="project-category" data-category="web3">
-                        <div class="category-header">
-                            <h3>⛓️ Web3 Projects</h3>
-                            <span class="category-count">1</span>
-                        </div>
-                        <div class="projects-wrapper">
-                            <div class="projects-scroll">
-                                <div class="project-card" data-project="nft-creator">
-                                    <div class="project-icon">🎨</div>
-                                    <div class="project-name">NFT Creator</div>
-                                    <div class="project-tooltip">
-                                        <h4>NFT Creation Platform</h4>
-                                        <p>Complete NFT creation and minting platform with IPFS storage.</p>
-                                        <div class="project-tags">
-                                            <span class="tag">Solidity</span>
-                                            <span class="tag">IPFS</span>
-                                            <span class="tag">Creative Tools</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-track">
-                                <div class="scroll-thumb"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Others -->
-                    <div class="project-category" data-category="others">
-                        <div class="category-header">
-                            <h3>💡 Others</h3>
-                            <span class="category-count">1</span>
-                        </div>
-                        <div class="projects-wrapper">
-                            <div class="projects-scroll">
-                                <div class="project-card" data-project="coming-soon">
-                                    <div class="project-icon"><i class="fas fa-clock"></i></div>
-                                    <div class="project-name">Waiting to be Updated</div>
-                                    <div class="project-tooltip">
-                                        <h4>More Projects Coming Soon</h4>
-                                        <p>Exciting new projects are in development. Stay tuned!</p>
-                                        <div class="project-tags">
-                                            <span class="tag">Coming Soon</span>
-                                            <span class="tag">Innovation</span>
-                                            <span class="tag">Creativity</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="scroll-track">
-                                <div class="scroll-thumb"></div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Projects -->
+        <section class="section">
+            <h2 class="section-title">Selected Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-title">LazyDDL: AI-powered Deadline Assistant</div>
+                <div class="project-desc">
+                    A prototype app with OCR/ASR deadline extraction, auto-generated tasks and reminders, and lightweight analytics. Designed for users overwhelmed by dense workloads and hard-to-track deadlines.
                 </div>
             </div>
 
-            <div id="contact" class="content">
-                <h2>Contact & Social Media</h2>
-                
-                <!-- 个人简介卡片 -->
-                <div class="contact-intro">
-                    <div class="contact-avatar">
-                        <img src="images/Profile.jpg" alt="WangXiRui">
-                        <div class="avatar-glow"></div>
-                    </div>
-                    <div class="contact-info">
-                        <h3>WangXiRui (Wangfans)</h3>
-                        <p>AI Researcher • Developer • Innovator</p>
-                        <div class="status-indicator">
-                            <span class="status-dot"></span>
-                            <span>Open for Collaboration</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 联系方式网格 -->
-                <div class="contact-grid">
-                    <!-- 邮箱联系我 -->
-                    <div class="contact-card" data-type="email">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <h4>Contact Me</h4>
-                            <p>Feel free to reach out for any ideas or collaboration opportunities</p>
-                            <div class="contact-email">wangfansheng1122@outlook.com</div>
-                            <div class="contact-actions">
-                                <a href="mailto:wangfansheng1122@outlook.com?subject=Hello!&body=Hi, I'd like to chat with you..." class="action-btn primary">
-                                    <span class="btn-icon">💌</span>
-                                    <span class="btn-text">Send Email</span>
-                                </a>
-                                <button class="action-btn copy-btn" data-copy="wangfansheng1122@outlook.com">
-                                    <span class="btn-icon">📋</span>
-                                    <span class="btn-text">Copy Email</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-
-                    <!-- GitHub -->
-                    <div class="contact-card" data-type="github">
-                        <div class="contact-icon"><i class="fab fa-github"></i></div>
-                        <div class="contact-details">
-                            <h4>GitHub</h4>
-                            <p>Code repositories, open source projects and tech sharing</p>
-                            <div class="github-note">💡 Give a star before you go～</div>
-                            <div class="contact-actions">
-                                <a href="https://github.com/wangfans248" target="_blank" class="action-btn primary">
-                                    <span class="btn-icon">🚀</span>
-                                    <span class="btn-text">Visit Profile</span>
-                                </a>
-                                <button class="action-btn copy-btn" data-copy="https://github.com/wangfans248">
-                                    <span class="btn-icon">📋</span>
-                                    <span class="btn-text">Copy Link</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-
-                    <!-- 个人博客 -->
-                    <div class="contact-card" data-type="blog">
-                        <div class="contact-icon"><i class="fas fa-blog"></i></div>
-                        <div class="contact-details">
-                            <h4>Personal Blog</h4>
-                            <p>Life insights, thoughts sharing and creative records</p>
-
-                            <div class="contact-actions">
-                                <a href="https://wangfans248.github.io/blog" target="_blank" class="action-btn primary">
-                                    <span class="btn-icon">🌟</span>
-                                    <span class="btn-text">Read Blog</span>
-                                </a>
-                                <button class="action-btn copy-btn" data-copy="https://wangfans248.github.io/blog">
-                                    <span class="btn-icon">📋</span>
-                                    <span class="btn-text">Copy Link</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-
-                    <!-- 技术指南 -->
-                    <div class="contact-card" data-type="tech">
-                        <div class="contact-icon"><i class="fas fa-code"></i></div>
-                                                <div class="contact-details">
-                            <h4>Technical Guides</h4>
-                            <p>In-depth technical articles, programming tutorials and experience sharing</p>
-
-                            <div class="contact-actions">
-                                <a href="https://wangfans248.github.io/tutorials" target="_blank" class="action-btn primary">
-                                    <span class="btn-icon">🔧</span>
-                                    <span class="btn-text">View Tutorials</span>
-                                </a>
- 
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-
-                    <!-- 合作邀请 -->
-                    <div class="contact-card" data-type="collaboration">
-                        <div class="contact-icon"><i class="fas fa-handshake"></i></div>
-                        <div class="contact-details">
-                            <h4>Collaboration</h4>
-                            <p>Project collaboration, academic exchange, technical discussion</p>
-                            <div class="contact-actions">
-                                <button class="action-btn primary" onclick="openFansbotChat()">
-                                    <span class="btn-icon">🤖</span>
-                                    <span class="btn-text">AI Assistant</span>
-                                </button>
-                                <a href="mailto:wangfansheng1122@outlook.com?subject=☕ Coffee Chat Invitation&body=Hi! Would you like to chat? Do you have time for a coffee chat?" class="action-btn">
-                                    <span class="btn-icon">☕</span>
-                                    <span class="btn-text">Coffee Chat</span>
-                                </a>
-                                <a href="mailto:wangfansheng1122@outlook.com?subject=💬 Online Communication&body=Would like to have an online discussion..." class="action-btn">
-                                    <span class="btn-icon">💬</span>
-                                    <span class="btn-text">Online Chat</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-
-                    <!-- 社交媒体 -->
-                    <div class="contact-card" data-type="social">
-                        <div class="contact-icon"><i class="fas fa-share-alt"></i></div>
-                        <div class="contact-details">
-                            <h4>Social Media</h4>
-                            <p>Follow my latest updates and sharing</p>
-                            <div class="social-grid">
-                                <a href="https://youtube.com/@wangfans248" target="_blank" class="social-btn" title="YouTube" data-platform="youtube">
-                                    <span class="social-icon"><i class="fab fa-youtube"></i></span>
-                                </a>
-                                <a href="https://linkedin.com/in/wangfans248" target="_blank" class="social-btn" title="LinkedIn" data-platform="linkedin">
-                                    <span class="social-icon"><i class="fab fa-linkedin"></i></span>
-                                </a>
-                                <a href="https://reddit.com/u/wangfans248" target="_blank" class="social-btn" title="Reddit" data-platform="reddit">
-                                    <span class="social-icon"><i class="fab fa-reddit"></i></span>
-                                </a>
-                                <a href="https://xiaohongshu.com/user/profile/wangfans248" target="_blank" class="social-btn" title="小红书" data-platform="xiaohongshu">
-                                    <span class="social-icon"><i class="fas fa-book-open"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div class="contact-footer">
-                    <p>🌟 Welcome to discuss technology, academics or any interesting ideas with me!</p>
-                    <div class="response-time">
-                        <span class="time-icon">⏰</span>
-                        <span>Usually reply within 24 hours</span>
-                    </div>
+            <div class="project-item">
+                <div class="project-title">Qiming Mirror: Multisensory AI Assistant for the Visually Impaired</div>
+                <div class="project-desc">
+                    A demo system converting visual inputs into multisensory descriptions using OCR, object recognition, and a lightweight RAG module, enabling safer daily decisions for visually impaired users.
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Xirui Wang · Last updated: Dec 2024</p>
+        </footer>
     </div>
-
-    <!-- Fansbot AI聊天组件 -->
-    <script src="fansbot-chat.js"></script>
-
-    <!-- 微信分享优化脚本 -->
-    <script>
-        // 动态设置分享信息
-        function setShareInfo() {
-            const shareData = {
-                title: 'WangXiRui - AI研究者 & 技术探索者',
-                desc: '华中科技大学机器人工程创新班学生，专注人工智能研究与开发。分享技术教程和创新项目，欢迎交流合作！🤖',
-                link: 'https://wangfans248.github.io',
-                                 imgUrl: 'https://wangfans248.github.io/images/wangxirui-share-card.png'
-            };
-            
-            // 如果页面有微信JS-SDK，配置分享
-            if (typeof wx !== 'undefined') {
-                wx.ready(function() {
-                    wx.updateAppMessageShareData(shareData);
-                    wx.updateTimelineShareData(shareData);
-                });
-            }
-            
-            // 设置页面标题（影响分享标题）
-            document.title = shareData.title;
-        }
-        
-        // 页面加载完成后执行
-        document.addEventListener('DOMContentLoaded', setShareInfo);
-    </script>
-
-    <script>
-        // 全局变量存储Fansbot实例
-        let fansbotInstance = null;
-        
-        function showContent(event, section) {
-            document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
-            document.getElementById(section).classList.add('active');
-
-            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-            event.currentTarget.classList.add('active');
-        }
-        
-        function openFansbotChat() {
-            if (fansbotInstance) {
-                fansbotInstance.openChat();
-            } else {
-                // If AI assistant is not initialized, show message
-                alert('🤖 AI Assistant is initializing, please try again later!');
-                console.log('Fansbot instance not found, trying to reinitialize...');
-                
-                // 尝试重新初始化
-                try {
-                    fansbotInstance = new FansBot({
-                        apiUrl: 'https://your-api-endpoint.com',
-                        fallbackApiUrl: 'http://localhost:8000',
-                        theme: 'academic',
-                        position: 'bottom-right',
-                        demoMode: true
-                    });
-                    console.log('🤖 Fansbot reinitialized successfully!');
-                } catch (error) {
-                    console.error('Failed to reinitialize Fansbot:', error);
-                }
-            }
-        }
-        
-        // Project repository mapping
-        const projectRepositories = {
-            'cal-analyse': 'https://github.com/wangfans248/CalAnalyse',
-            'fast-cal': 'https://github.com/wangfans248/FastCal',
-            'personal-website': 'https://github.com/wangfans248/wangfans248.github.io',
-            'ai-assistant': 'https://github.com/wangfans248/AI-Assistant',
-            'nft-creator': 'https://github.com/wangfans248/NFT-Creator',
-            'coming-soon': '#' // 占位符，点击时不跳转
-        };
-        
-        // Handle project card click events
-        function handleProjectClick(projectId) {
-            const repoUrl = projectRepositories[projectId];
-            if (repoUrl && repoUrl !== '#') {
-                window.open(repoUrl, '_blank');
-            } else if (projectId === 'coming-soon') {
-                // 为"待更新"项目显示特殊提示
-                const toast = document.createElement('div');
-                toast.innerHTML = '🚧 More exciting projects are coming soon!';
-                toast.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: linear-gradient(135deg, #F59E0B, #D97706);
-                    color: white;
-                    padding: 12px 20px;
-                    border-radius: 8px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    z-index: 10000;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                    transform: translateX(100%);
-                    transition: transform 0.3s ease;
-                `;
-                
-                document.body.appendChild(toast);
-                
-                // 显示动画
-                setTimeout(() => {
-                    toast.style.transform = 'translateX(0)';
-                }, 100);
-                
-                // 隐藏动画
-                setTimeout(() => {
-                    toast.style.transform = 'translateX(100%)';
-                    setTimeout(() => {
-                        document.body.removeChild(toast);
-                    }, 300);
-                }, 2500);
-            } else {
-                console.log(`Repository link for project ${projectId} is not set yet`);
-            }
-        }
-        
-        // Add click event listeners for project cards
-        function initializeProjectCards() {
-            let currentActiveCard = null;
-            
-            // Helper function to hide all tooltips
-            function hideAllTooltips() {
-                document.querySelectorAll('.project-tooltip').forEach(tooltip => {
-                    tooltip.style.opacity = '0';
-                    tooltip.style.visibility = 'hidden';
-                });
-                document.querySelectorAll('.project-card').forEach(card => {
-                    if (card !== currentActiveCard) {
-                        card.style.transform = 'translateY(0) scale(1)';
-                    }
-                });
-            }
-            
-            document.querySelectorAll('.project-card').forEach(card => {
-                const projectId = card.getAttribute('data-project');
-                const tooltip = card.querySelector('.project-tooltip');
-                
-                card.addEventListener('click', () => handleProjectClick(projectId));
-                
-                // 添加点击动画效果
-                card.addEventListener('mousedown', function() {
-                    this.style.transform = 'translateY(-8px) scale(0.98)';
-                });
-                
-                card.addEventListener('mouseup', function() {
-                    this.style.transform = 'translateY(-8px) scale(1.05)';
-                });
-                
-                // 改进的鼠标悬停处理
-                card.addEventListener('mouseenter', function(e) {
-                    // 立即隐藏所有其他tooltip
-                    hideAllTooltips();
-                    
-                    // 设置当前激活的卡片
-                    currentActiveCard = this;
-                    
-                    // 显示当前tooltip
-                    if (tooltip) {
-                        setTimeout(() => {
-                            tooltip.style.opacity = '1';
-                            tooltip.style.visibility = 'visible';
-                        }, 50); // 短暂延迟确保其他tooltip已隐藏
-                    }
-                });
-                
-                card.addEventListener('mouseleave', function(e) {
-                    // 简化的离开检测 - 使用更宽松的边界
-                    setTimeout(() => {
-                        const rect = this.getBoundingClientRect();
-                        const x = e.clientX;
-                        const y = e.clientY;
-                        
-                        // 添加一些容差以避免边界问题
-                        const margin = 5;
-                        if (x < rect.left - margin || x > rect.right + margin || 
-                            y < rect.top - margin || y > rect.bottom + margin) {
-                            
-                            this.style.transform = 'translateY(0) scale(1)';
-                            
-                            if (tooltip) {
-                                tooltip.style.opacity = '0';
-                                tooltip.style.visibility = 'hidden';
-                            }
-                            
-                            if (currentActiveCard === this) {
-                                currentActiveCard = null;
-                            }
-                        }
-                    }, 10); // 短暂延迟以确保坐标准确
-                });
-                
-                // 防止tooltip内的事件冒泡
-                if (tooltip) {
-                    tooltip.addEventListener('mouseenter', function(e) {
-                        e.stopPropagation();
-                    });
-                }
-            });
-            
-            // 为整个项目容器添加mouseleave事件作为备份
-            document.querySelectorAll('.projects-scroll').forEach(container => {
-                container.addEventListener('mouseleave', function(e) {
-                    hideAllTooltips();
-                    currentActiveCard = null;
-                });
-                
-                // 添加鼠标移动事件来实时检测哪个卡片应该激活
-                let mouseMoveTimeout;
-                container.addEventListener('mousemove', function(e) {
-                    // 节流处理，避免过度频繁的检测
-                    if (mouseMoveTimeout) {
-                        clearTimeout(mouseMoveTimeout);
-                    }
-                    
-                    mouseMoveTimeout = setTimeout(() => {
-                        let foundCard = null;
-                        
-                        // 检查鼠标当前位置下的卡片
-                        const cards = container.querySelectorAll('.project-card');
-                        cards.forEach(card => {
-                            const rect = card.getBoundingClientRect();
-                            if (e.clientX >= rect.left && e.clientX <= rect.right &&
-                                e.clientY >= rect.top && e.clientY <= rect.bottom) {
-                                foundCard = card;
-                            }
-                        });
-                        
-                        // 如果找到了不同的卡片，切换显示
-                        if (foundCard && foundCard !== currentActiveCard) {
-                            hideAllTooltips();
-                            currentActiveCard = foundCard;
-                            
-                            const tooltip = foundCard.querySelector('.project-tooltip');
-                            if (tooltip) {
-                                tooltip.style.opacity = '1';
-                                tooltip.style.visibility = 'visible';
-                            }
-                        } else if (!foundCard && currentActiveCard) {
-                            // 如果鼠标不在任何卡片上，隐藏所有tooltip
-                            hideAllTooltips();
-                            currentActiveCard = null;
-                        }
-                    }, 16); // 约60fps的更新频率
-                });
-            });
-        }
-        
-        // 初始化拖动栏功能
-        function initializeScrollbars() {
-            document.querySelectorAll('.projects-wrapper').forEach(wrapper => {
-                const scrollContainer = wrapper.querySelector('.projects-scroll');
-                const scrollTrack = wrapper.querySelector('.scroll-track');
-                const scrollThumb = wrapper.querySelector('.scroll-thumb');
-                
-                if (!scrollContainer || !scrollTrack || !scrollThumb) return;
-                
-                let isDragging = false;
-                let startX = 0;
-                let scrollLeft = 0;
-                
-                // 更新滑块位置和大小
-                function updateScrollbar() {
-                    const scrollWidth = scrollContainer.scrollWidth;
-                    const clientWidth = scrollContainer.clientWidth;
-                    const scrollLeft = scrollContainer.scrollLeft;
-                    
-                    // 始终显示滚动条，即使内容不超出
-                    scrollTrack.style.display = 'block';
-                    
-                    if (scrollWidth <= clientWidth) {
-                        // 如果内容不超出，滑块占满整个轨道
-                        scrollThumb.style.width = '100%';
-                        scrollThumb.style.left = '0px';
-                        scrollTrack.style.opacity = '0.3';
-                        scrollThumb.style.cursor = 'default';
-                    } else {
-                        // 如果内容超出，显示正常的滚动条
-                        scrollTrack.style.opacity = '1';
-                        scrollThumb.style.cursor = 'grab';
-                        
-                        const trackWidth = scrollTrack.offsetWidth;
-                        const thumbWidth = Math.max(30, (clientWidth / scrollWidth) * trackWidth);
-                        const maxLeft = trackWidth - thumbWidth;
-                        const thumbLeft = (scrollLeft / (scrollWidth - clientWidth)) * maxLeft;
-                        
-                        scrollThumb.style.width = thumbWidth + 'px';
-                        scrollThumb.style.left = Math.max(0, Math.min(thumbLeft, maxLeft)) + 'px';
-                    }
-                }
-                
-                // 监听滚动事件
-                scrollContainer.addEventListener('scroll', updateScrollbar);
-                
-                // 监听窗口大小变化
-                window.addEventListener('resize', updateScrollbar);
-                
-                // 拖拽功能
-                scrollThumb.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    startX = e.clientX - scrollThumb.offsetLeft;
-                    scrollThumb.style.cursor = 'grabbing';
-                    document.body.style.userSelect = 'none';
-                });
-                
-                document.addEventListener('mousemove', (e) => {
-                    if (!isDragging) return;
-                    
-                    const x = e.clientX - scrollTrack.getBoundingClientRect().left - startX;
-                    const maxX = scrollTrack.offsetWidth - scrollThumb.offsetWidth;
-                    const clampedX = Math.max(0, Math.min(x, maxX));
-                    
-                    const scrollRatio = clampedX / maxX;
-                    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-                    scrollContainer.scrollLeft = scrollRatio * maxScrollLeft;
-                });
-                
-                document.addEventListener('mouseup', () => {
-                    if (isDragging) {
-                        isDragging = false;
-                        scrollThumb.style.cursor = 'grab';
-                        document.body.style.userSelect = '';
-                    }
-                });
-                
-                // 点击轨道跳转
-                scrollTrack.addEventListener('click', (e) => {
-                    if (e.target === scrollThumb) return;
-                    
-                    const trackRect = scrollTrack.getBoundingClientRect();
-                    const clickX = e.clientX - trackRect.left;
-                    const thumbWidth = scrollThumb.offsetWidth;
-                    const maxX = scrollTrack.offsetWidth - thumbWidth;
-                    const targetX = Math.max(0, Math.min(clickX - thumbWidth / 2, maxX));
-                    
-                    const scrollRatio = targetX / maxX;
-                    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-                    scrollContainer.scrollLeft = scrollRatio * maxScrollLeft;
-                });
-                
-                // 初始化滚动条
-                setTimeout(() => {
-                    updateScrollbar();
-                }, 100);
-            });
-        }
-        
-        // 复制到剪贴板功能
-        function copyToClipboard(text) {
-            if (navigator.clipboard && window.isSecureContext) {
-                // 现代浏览器API
-                return navigator.clipboard.writeText(text).then(() => {
-                    showCopySuccess();
-                }).catch(err => {
-                    console.error('复制失败:', err);
-                    fallbackCopy(text);
-                });
-            } else {
-                // 降级方案
-                fallbackCopy(text);
-            }
-        }
-
-        function fallbackCopy(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.focus();
-            textarea.select();
-            
-            try {
-                document.execCommand('copy');
-                showCopySuccess();
-            } catch (err) {
-                console.error('复制失败:', err);
-            }
-            
-            document.body.removeChild(textarea);
-        }
-
-        function showCopySuccess() {
-            // 创建成功提示
-            const toast = document.createElement('div');
-            toast.innerHTML = '✅ 已复制到剪贴板';
-            toast.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: #28a745;
-                color: white;
-                padding: 12px 20px;
-                border-radius: 8px;
-                font-size: 14px;
-                font-weight: 500;
-                z-index: 10000;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-            `;
-            
-            document.body.appendChild(toast);
-            
-            // 显示动画
-            setTimeout(() => {
-                toast.style.transform = 'translateX(0)';
-            }, 100);
-            
-            // 隐藏动画
-            setTimeout(() => {
-                toast.style.transform = 'translateX(100%)';
-                setTimeout(() => {
-                    document.body.removeChild(toast);
-                }, 300);
-            }, 2000);
-        }
-
-        // 初始化联系页面交互
-        function initializeContactPage() {
-            // 为所有复制按钮添加事件监听器
-            document.querySelectorAll('.copy-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const textToCopy = this.getAttribute('data-copy');
-                    copyToClipboard(textToCopy);
-                    
-                    // 按钮反馈动画
-                    this.style.transform = 'scale(0.95)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 150);
-                });
-            });
-
-            // 确保AI助手咨询按钮正常工作
-            const aiChatBtn = document.querySelector('button[onclick="openFansbotChat()"]');
-            if (aiChatBtn) {
-                console.log('找到AI助手咨询按钮:', aiChatBtn);
-                
-                // 确保按钮可点击
-                aiChatBtn.style.pointerEvents = 'auto';
-                aiChatBtn.style.zIndex = '1000';
-                
-                // 移除可能的事件冲突，添加新的事件监听器
-                aiChatBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    e.preventDefault();
-                    console.log('AI助手咨询按钮被点击 - 通过事件监听器');
-                    openFansbotChat();
-                });
-                
-                // 也保留原有的onclick属性作为备用
-                console.log('AI助手咨询按钮事件已绑定');
-            } else {
-                console.error('未找到AI助手咨询按钮');
-                // 尝试通过文本内容查找
-                const allButtons = document.querySelectorAll('button');
-                allButtons.forEach((btn, index) => {
-                    if (btn.textContent.includes('AI助手咨询')) {
-                        console.log(`找到AI助手按钮 (通过文本): 按钮${index}`, btn);
-                        btn.addEventListener('click', function(e) {
-                            e.stopPropagation();
-                            e.preventDefault();
-                            console.log('AI助手咨询按钮被点击 - 通过文本查找');
-                            openFansbotChat();
-                        });
-                    }
-                });
-            }
-
-            // 联系卡片悬停效果增强
-            document.querySelectorAll('.contact-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.zIndex = '10';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.zIndex = '1';
-                });
-            });
-
-            // 社交媒体按钮增强效果
-            document.querySelectorAll('.social-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    // 这里可以添加实际的社交媒体链接
-                    if (this.getAttribute('href') === '#') {
-                        e.preventDefault();
-                        
-                        // 创建提示信息
-                        const tooltip = document.createElement('div');
-                        tooltip.innerHTML = '🚧 社交媒体链接待添加';
-                        tooltip.style.cssText = `
-                            position: fixed;
-                            background: rgba(0,0,0,0.8);
-                            color: white;
-                            padding: 8px 12px;
-                            border-radius: 6px;
-                            font-size: 12px;
-                            z-index: 10000;
-                            pointer-events: none;
-                        `;
-                        
-                        document.body.appendChild(tooltip);
-                        
-                        const rect = this.getBoundingClientRect();
-                        tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-                        tooltip.style.top = (rect.top - tooltip.offsetHeight - 8) + 'px';
-                        
-                        setTimeout(() => {
-                            document.body.removeChild(tooltip);
-                        }, 2000);
-                    }
-                });
-            });
-        }
-
-        // 页面加载完成后初始化所有功能
-        document.addEventListener('DOMContentLoaded', function() {
-            // 初始化项目卡片交互
-            initializeProjectCards();
-            
-            // 初始化联系页面交互
-            initializeContactPage();
-            
-            // 初始化拖动栏
-            setTimeout(() => {
-                initializeScrollbars();
-                console.log('🎯 滚动条已初始化');
-                
-                // 调试：确保滚动条可见
-                document.querySelectorAll('.scroll-track').forEach((track, index) => {
-                    track.style.background = 'rgba(128, 0, 0, 0.3)';
-                    track.style.height = '8px';
-                    console.log(`滚动条 ${index + 1} 已设置可见`);
-                });
-            }, 200);
-            
-            try {
-                fansbotInstance = new FansBot({
-                    // 优先使用在线API，失败时降级到演示模式
-                    apiUrl: 'https://your-api-endpoint.com', // 后续替换为实际API地址
-                    fallbackApiUrl: 'http://localhost:8000', // 本地测试
-                    theme: 'academic',
-                    position: 'bottom-right',
-                    demoMode: true // 启用演示模式
-                });
-                console.log('🤖 Fansbot initialized successfully!');
-            } catch (error) {
-                console.error('Failed to initialize Fansbot:', error);
-            }
-        });
-    </script>
 </body>
 </html>
